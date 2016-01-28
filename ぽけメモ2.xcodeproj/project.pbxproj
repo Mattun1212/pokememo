@@ -15,6 +15,9 @@
 		BFDA72571C10573F0096BE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */; };
 		BFDA72621C10573F0096BE82 /* _____2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA72611C10573F0096BE82 /* _____2Tests.swift */; };
 		BFDA726D1C10573F0096BE82 /* _____2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA726C1C10573F0096BE82 /* _____2UITests.swift */; };
+		BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */; };
+		BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727C1C1061C00096BE82 /* FourthViewController.swift */; };
+		BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		BFDA72681C10573F0096BE82 /* ぽけメモ2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2UITests.swift"; sourceTree = "<group>"; };
 		BFDA726E1C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BFDA727C1C1061C00096BE82 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				BFDA724A1C10573F0096BE82 /* AppDelegate.swift */,
 				BFDA724C1C10573F0096BE82 /* FirstViewController.swift */,
 				BFDA724E1C10573F0096BE82 /* SecondViewController.swift */,
+				BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */,
+				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
+				BFDA727C1C1061C00096BE82 /* FourthViewController.swift */,
 				BFDA72501C10573F0096BE82 /* Main.storyboard */,
 				BFDA72531C10573F0096BE82 /* Assets.xcassets */,
 				BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */,
@@ -258,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
 				BFDA724F1C10573F0096BE82 /* SecondViewController.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
+				BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */,
+				BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */,
 				BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +497,7 @@
 				BFDA72731C10573F0096BE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFDA72741C10573F0096BE82 /* Build configuration list for PBXNativeTarget "ぽけメモ2Tests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				BFDA72761C10573F0096BE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFDA72771C10573F0096BE82 /* Build configuration list for PBXNativeTarget "ぽけメモ2UITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +515,7 @@
 				BFDA72791C10573F0096BE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
