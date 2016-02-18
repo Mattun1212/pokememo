@@ -39,4 +39,15 @@ class FirstViewController: UIViewController , UITableViewDataSource, UITableView
         let path = tableView.indexPathForRowAtPoint(cell.convertPoint(cell.bounds.origin, toView: tableView))
         NSLog("row = %d, value = %@", path!.row, value)
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let CellViewController: UIViewController = MemoViewController()
+        
+        // アニメーションを設定.
+        CellViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        // Viewの移動.
+        self.presentViewController(CellViewController, animated: true, completion: nil)
+        
+    }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */; };
 		BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724A1C10573F0096BE82 /* AppDelegate.swift */; };
 		BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724C1C10573F0096BE82 /* FirstViewController.swift */; };
 		BFDA724F1C10573F0096BE82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724E1C10573F0096BE82 /* SecondViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		BFDA72471C10573F0096BE82 /* ぽけメモ2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ぽけメモ2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDA724A1C10573F0096BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDA724C1C10573F0096BE82 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
 				BFDA727C1C1061C00096BE82 /* FourthViewController.swift */,
 				BFDA72501C10573F0096BE82 /* Main.storyboard */,
+				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
 				BFDA72531C10573F0096BE82 /* Assets.xcassets */,
 				BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */,
 				BFDA72581C10573F0096BE82 /* Info.plist */,
@@ -271,6 +274,7 @@
 				BFDA724F1C10573F0096BE82 /* SecondViewController.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
 				BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */,
+				BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */,
 				BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */,
 				BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */,
 			);
