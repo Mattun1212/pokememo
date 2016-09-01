@@ -7,52 +7,72 @@
 //
 
 import UIKit
+
+class MemoViewController: UIViewController ,UITextFieldDelegate {
     
-    class MemoViewController: UIViewController ,UITextFieldDelegate{
+    var selectedIndex: Int?
+    var titleArray = [String]()
+    var contentArray = [String]()
+    var tappedCellIndex: Int = 0
+    
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var contentTextView: UITextView!
+    
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        @IBOutlet var titleTextField: UITextField!
-        @IBOutlet var contentTextView: UITextView!
+        titleArray = saveData.arrayForKey("titleArray") as! [String]
+        contentArray = saveData.arrayForKey("contentArray") as! [String]
         
-        let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view, typically from a nib.
-            titleTextField.text = saveData.objectForKey("title") as! String?
-            contentTextView.text = saveData.objectForKey("content") as! String?
-            
-            titleTextField.delegate = self
+        if selectedIndex != nil{
+            titleTextField.text! = titleArray[selectedIndex!]
+            contentTextView.text! = contentArray[selectedIndex!]
+
         }
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+        
+    
+    override func viewWillDisappear(animated: Bool) {
+        //　別の画面に移る直前の処理
+        
+        if selectedIndex != nil {
+//            titleTextFieldの値がnilでない時、selectedIndex番目の値を変更する
+            
+           titleArray[selectedIndex!] = titleTextField.text!
+           contentArray[selectedIndex!] = contentTextView.text!
+            
+        }else if selectedIndex == nil {
+//    　　　titleTextFieldの値がnilである時、selectedindexにinsertする
+            titleArray.append(titleTextField.text!)
+            contentArray.append(contentTextView.text!)
+ 
         }
         
-        @IBAction func saveMeno() {
-            saveData.setObject(titleTextField.text, forKey: "title")
-            saveData.setObject(contentTextView.text, forKey: "content")
-            saveData.synchronize()
-            
-            let alert = UIAlertController(title: "保存" ,
-                message: "メモの保存が完了しました。",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction(
-                UIAlertAction(
-                    title: "OK",
-                    style: UIAlertActionStyle.Default,
-                    handler: {action in
-                        self.navigationController?.popViewControllerAnimated(true)
-                        NSLog("OKボタンが押されました！")
-                    }
-                )
-            )
-            
-            presentViewController(alert, animated: true, completion: nil)
+        
+        if titleTextField.text != ""{
+            saveData.setObject(titleArray, forKey: "titleArray")
+            saveData.setObject(contentArray, forKey: "contentArray")
+
         }
-        func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+        
+    
+        
+    }
+
 }
+
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+
