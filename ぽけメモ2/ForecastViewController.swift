@@ -17,16 +17,22 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var fifthTextField: UITextField!
     @IBOutlet weak var sixthTextField: UITextField!
     
-    var sendText:String = ""
+    var sendText:[String]!
+    
+    var iconload = IconLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendText = self.firstTextField.text!
-        sendText = self.secondTextField.text!
-        sendText = self.thirdTextField.text!
-        sendText = self.fourthTextField.text!
-        sendText = self.fifthTextField.text!
-        sendText = self.sixthTextField.text!
+    
+       iconload.loadcsv()
+        var result: [[String]] = []
+        if let csvPath = NSBundle.mainBundle().pathForResource("pokemonData", ofType: "csv") {
+            let csvString = NSString(contentsOfFile: csvPath, encoding: NSUTF8StringEncoding, error: nil) as! String
+            csvString.enumerateLines { (line, stop) -> () in
+                result.append(line.componentsSeparatedByString(","))
+            }
+        }
+        print(result)
     }
 
     
