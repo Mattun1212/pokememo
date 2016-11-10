@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF2192071D1BFF5600AA7DF9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2192061D1BFF5600AA7DF9 /* SecondViewController.swift */; };
 		BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */; };
 		BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */; };
 		BF2ED54A1DAF863E00F8FAEF /* monsterball.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2ED5491DAF863E00F8FAEF /* monsterball.png */; };
@@ -23,6 +22,7 @@
 		BF9622A91D93FC2D0010812A /* setup.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622A81D93FC2D0010812A /* setup.png */; };
 		BF9622AB1D93FC380010812A /* adjust.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622AA1D93FC380010812A /* adjust.png */; };
 		BFA4375B1D78448C00181553 /* FormatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4375A1D78448C00181553 /* FormatViewController.swift */; };
+		BFB4C78F1DD48561003D0880 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4C78E1DD48561003D0880 /* SecondViewController.swift */; };
 		BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724A1C10573F0096BE82 /* AppDelegate.swift */; };
 		BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724C1C10573F0096BE82 /* FirstViewController.swift */; };
 		BFDA72521C10573F0096BE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72501C10573F0096BE82 /* Main.storyboard */; };
@@ -53,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF2192061D1BFF5600AA7DF9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../../../../.Trash/SecondViewController.swift; sourceTree = "<group>"; };
 		BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterballViewControllor.swift; sourceTree = "<group>"; };
 		BF2ED5491DAF863E00F8FAEF /* monsterball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monsterball.png; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		BF9622A81D93FC2D0010812A /* setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setup.png; sourceTree = "<group>"; };
 		BF9622AA1D93FC380010812A /* adjust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adjust.png; sourceTree = "<group>"; };
 		BFA4375A1D78448C00181553 /* FormatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatViewController.swift; sourceTree = "<group>"; };
+		BFB4C78E1DD48561003D0880 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BFDA72471C10573F0096BE82 /* ぽけメモ2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ぽけメモ2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDA724A1C10573F0096BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDA724C1C10573F0096BE82 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */,
 				BFDA724C1C10573F0096BE82 /* FirstViewController.swift */,
 				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
-				BF2192061D1BFF5600AA7DF9 /* SecondViewController.swift */,
+				BFB4C78E1DD48561003D0880 /* SecondViewController.swift */,
 				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
 				BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */,
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
@@ -323,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB4C78F1DD48561003D0880 /* SecondViewController.swift in Sources */,
 				BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */,
 				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
@@ -330,7 +331,6 @@
 				BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */,
 				BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */,
 				BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */,
-				BF2192071D1BFF5600AA7DF9 /* SecondViewController.swift in Sources */,
 				BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */,
 				BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */,
 				BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */,
