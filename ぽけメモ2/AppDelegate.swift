@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = UIColor(red: CGFloat(42.0/225.0), green: CGFloat(158.0/255.0), blue: CGFloat(218.0/255.0), alpha: CGFloat(1.0))
+        //ナビゲーションバーの背景を変更
+        UINavigationBar.appearance().barTintColor = UIColor(red: CGFloat(186.0/255.0), green: CGFloat(217.0/255.0), blue: CGFloat(242.0/255.0), alpha: CGFloat(1.0))
+
+        //ナビゲーションのタイトル文字列の色を変更
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+
+        
+        
+        
+        
         return true
     }
 
