@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF12879E1E8018940040119E /* rokkakkei.png in Resources */ = {isa = PBXBuildFile; fileRef = BF12879D1E8018940040119E /* rokkakkei.png */; };
 		BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */; };
 		BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */; };
 		BF2ED54A1DAF863E00F8FAEF /* monsterball.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2ED5491DAF863E00F8FAEF /* monsterball.png */; };
@@ -17,12 +18,14 @@
 		BF4C4FFC1D9D1B1600D298E4 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4C4FFB1D9D1B1600D298E4 /* start.png */; };
 		BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */; };
 		BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */; };
+		BF6F2CEB1E27A1CD0052CCCF /* TableViewRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */; };
+		BF6F2CEE1E27A25F0052CCCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CED1E27A25F0052CCCF /* ViewController.swift */; };
 		BF96229F1D93F1220010812A /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = BF96229E1D93F1220010812A /* dot.png */; };
 		BF9622A71D93FC240010812A /* battle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622A61D93FC240010812A /* battle.png */; };
 		BF9622A91D93FC2D0010812A /* setup.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622A81D93FC2D0010812A /* setup.png */; };
 		BF9622AB1D93FC380010812A /* adjust.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622AA1D93FC380010812A /* adjust.png */; };
 		BFA4375B1D78448C00181553 /* FormatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4375A1D78448C00181553 /* FormatViewController.swift */; };
-		BFB4C78F1DD48561003D0880 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4C78E1DD48561003D0880 /* SecondViewController.swift */; };
+		BFB4C78F1DD48561003D0880 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4C78E1DD48561003D0880 /* BattleViewController.swift */; };
 		BFB4C7911DD48924003D0880 /* pokemonData.csv in Resources */ = {isa = PBXBuildFile; fileRef = BFB4C7901DD48924003D0880 /* pokemonData.csv */; };
 		BFB4CB1D1DD489A0003D0880 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4C7931DD48999003D0880 /* 001.png */; };
 		BFB4CB1E1DD489A0003D0880 /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4C7941DD48999003D0880 /* 002.png */; };
@@ -931,15 +934,16 @@
 		BFB4CEA51DD489A0003D0880 /* egg.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4CB1B1DD489A0003D0880 /* egg.png */; };
 		BFB4CEA61DD489A0003D0880 /* タマゴ.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4CB1C1DD489A0003D0880 /* タマゴ.png */; };
 		BFB4CEA81DD492E0003D0880 /* iconload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4CEA71DD492E0003D0880 /* iconload.swift */; };
+		BFB4CEAA1DF0355C003D0880 /* CustomHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4CEA91DF0355C003D0880 /* CustomHeaderFooterViewController.swift */; };
 		BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724A1C10573F0096BE82 /* AppDelegate.swift */; };
-		BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724C1C10573F0096BE82 /* FirstViewController.swift */; };
+		BFDA724D1C10573F0096BE82 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724C1C10573F0096BE82 /* PartyViewController.swift */; };
 		BFDA72521C10573F0096BE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72501C10573F0096BE82 /* Main.storyboard */; };
 		BFDA72541C10573F0096BE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72531C10573F0096BE82 /* Assets.xcassets */; };
 		BFDA72571C10573F0096BE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */; };
 		BFDA72621C10573F0096BE82 /* _____2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA72611C10573F0096BE82 /* _____2Tests.swift */; };
 		BFDA726D1C10573F0096BE82 /* _____2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA726C1C10573F0096BE82 /* _____2UITests.swift */; };
-		BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */; };
-		BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727C1C1061C00096BE82 /* FourthViewController.swift */; };
+		BFDA727B1C10618A0096BE82 /* AdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */; };
+		BFDA727D1C1061C00096BE82 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727C1C1061C00096BE82 /* SetupViewController.swift */; };
 		BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -961,6 +965,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF12879D1E8018940040119E /* rokkakkei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rokkakkei.png; path = ../../../rokkakkei.png; sourceTree = "<group>"; };
 		BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterballViewControllor.swift; sourceTree = "<group>"; };
 		BF2ED5491DAF863E00F8FAEF /* monsterball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monsterball.png; sourceTree = "<group>"; };
@@ -972,12 +977,14 @@
 		BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewControllor.swift; sourceTree = "<group>"; };
 		BF4C4FFF1D9D1FE400D298E4 /* ヒラギノ角ゴ Std W8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ角ゴ Std W8.otf"; sourceTree = "<group>"; };
 		BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAdditions.swift; sourceTree = "<group>"; };
+		BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRootCell.swift; sourceTree = "<group>"; };
+		BF6F2CED1E27A25F0052CCCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF96229E1D93F1220010812A /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		BF9622A61D93FC240010812A /* battle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battle.png; sourceTree = "<group>"; };
 		BF9622A81D93FC2D0010812A /* setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setup.png; sourceTree = "<group>"; };
 		BF9622AA1D93FC380010812A /* adjust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adjust.png; sourceTree = "<group>"; };
 		BFA4375A1D78448C00181553 /* FormatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatViewController.swift; sourceTree = "<group>"; };
-		BFB4C78E1DD48561003D0880 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BFB4C78E1DD48561003D0880 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		BFB4C7901DD48924003D0880 /* pokemonData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemonData.csv; sourceTree = "<group>"; };
 		BFB4C7931DD48999003D0880 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		BFB4C7941DD48999003D0880 /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
@@ -1886,21 +1893,22 @@
 		BFB4CB1B1DD489A0003D0880 /* egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg.png; sourceTree = "<group>"; };
 		BFB4CB1C1DD489A0003D0880 /* タマゴ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "タマゴ.png"; sourceTree = "<group>"; };
 		BFB4CEA71DD492E0003D0880 /* iconload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconload.swift; sourceTree = "<group>"; };
+		BFB4CEA91DF0355C003D0880 /* CustomHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		BFDA72471C10573F0096BE82 /* ぽけメモ2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ぽけメモ2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDA724A1C10573F0096BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFDA724C1C10573F0096BE82 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		BFDA724C1C10573F0096BE82 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 		BFDA72511C10573F0096BE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFDA72531C10573F0096BE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDA72561C10573F0096BE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDA72581C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA725D1C10573F0096BE82 /* ぽけメモ2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2Tests.swift"; sourceTree = "<group>"; };
+		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2Tests.swift; sourceTree = "<group>"; };
 		BFDA72631C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA72681C10573F0096BE82 /* ぽけメモ2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2UITests.swift"; sourceTree = "<group>"; };
+		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2UITests.swift; sourceTree = "<group>"; };
 		BFDA726E1C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		BFDA727C1C1061C00096BE82 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustViewController.swift; sourceTree = "<group>"; };
+		BFDA727C1C1061C00096BE82 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1929,6 +1937,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0F5F381EE01D7B001C8481 /* Party */ = {
+			isa = PBXGroup;
+			children = (
+				BFA4375A1D78448C00181553 /* FormatViewController.swift */,
+				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
+				BFDA724C1C10573F0096BE82 /* PartyViewController.swift */,
+			);
+			name = Party;
+			path = Party;
+			sourceTree = "<group>";
+		};
+		BF0F5F391EE01DF3001C8481 /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4C78E1DD48561003D0880 /* BattleViewController.swift */,
+				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
+			);
+			name = Battle;
+			path = Battle;
+			sourceTree = "<group>";
+		};
+		BF0F5F3A1EE01DFF001C8481 /* Adjust */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */,
+			);
+			name = Adjust;
+			path = Adjust;
+			sourceTree = "<group>";
+		};
+		BF0F5F3B1EE01E0C001C8481 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA727C1C1061C00096BE82 /* SetupViewController.swift */,
+			);
+			name = Setup;
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		BF0F5F3C1EE01EEA001C8481 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA724A1C10573F0096BE82 /* AppDelegate.swift */,
+				BFB4CEA91DF0355C003D0880 /* CustomHeaderFooterViewController.swift */,
+				BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */,
+				BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */,
+				BFB4CEA71DD492E0003D0880 /* iconload.swift */,
+			);
+			name = Others;
+			path = Others;
+			sourceTree = "<group>";
+		};
+		BF0F5F3D1EE01F1E001C8481 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
+			);
+			name = Cell;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BF0F5F3E1EE01F74001C8481 /* Accordion */ = {
+			isa = PBXGroup;
+			children = (
+				BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */,
+				BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */,
+				BF6F2CED1E27A25F0052CCCF /* ViewController.swift */,
+			);
+			name = Accordion;
+			path = Accordion;
+			sourceTree = "<group>";
+		};
+		BF0F5F3F1EE0202A001C8481 /* Navigate Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BF9622AA1D93FC380010812A /* adjust.png */,
+				BF4C4FF71D9D017200D298E4 /* adjust4.png */,
+				BF9622A61D93FC240010812A /* battle.png */,
+				BF4C4FF91D9D022E00D298E4 /* battle2.png */,
+				BF96229E1D93F1220010812A /* dot.png */,
+				BF2ED5491DAF863E00F8FAEF /* monsterball.png */,
+				BF9622A81D93FC2D0010812A /* setup.png */,
+				BF4C4FF11D9CFE4C00D298E4 /* setup2.png */,
+			);
+			name = "Navigate Icons";
+			path = "Navigate Icons";
+			sourceTree = "<group>";
+		};
+		BF0F5F401EE0205C001C8481 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF12879D1E8018940040119E /* rokkakkei.png */,
+				BF4C4FFB1D9D1B1600D298E4 /* start.png */,
+			);
+			name = Backgrounds;
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		BF0F5F421EE02086001C8481 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4C7901DD48924003D0880 /* pokemonData.csv */,
+				BF4C4FFF1D9D1FE400D298E4 /* ヒラギノ角ゴ Std W8.otf */,
+			);
+			name = Data;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BF6F2CEC1E27A1F30052CCCF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF0F5F3E1EE01F74001C8481 /* Accordion */,
+				BF0F5F3A1EE01DFF001C8481 /* Adjust */,
+				BF0F5F391EE01DF3001C8481 /* Battle */,
+				BF0F5F3D1EE01F1E001C8481 /* Cell */,
+				BF0F5F3C1EE01EEA001C8481 /* Others */,
+				BF0F5F381EE01D7B001C8481 /* Party */,
+				BF0F5F3B1EE01E0C001C8481 /* Setup */,
+			);
+			name = "View Controllers";
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		BFB4C7921DD48999003D0880 /* iconxy */ = {
 			isa = PBXGroup;
 			children = (
@@ -2845,10 +2976,10 @@
 		BFDA723E1C10573F0096BE82 = {
 			isa = PBXGroup;
 			children = (
+				BFDA72481C10573F0096BE82 /* Products */,
 				BFDA72491C10573F0096BE82 /* ぽけメモ2 */,
 				BFDA72601C10573F0096BE82 /* ぽけメモ2Tests */,
 				BFDA726B1C10573F0096BE82 /* ぽけメモ2UITests */,
-				BFDA72481C10573F0096BE82 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2865,35 +2996,15 @@
 		BFDA72491C10573F0096BE82 /* ぽけメモ2 */ = {
 			isa = PBXGroup;
 			children = (
-				BF4C4FFF1D9D1FE400D298E4 /* ヒラギノ角ゴ Std W8.otf */,
-				BF2ED5491DAF863E00F8FAEF /* monsterball.png */,
-				BF4C4FFB1D9D1B1600D298E4 /* start.png */,
-				BF4C4FF91D9D022E00D298E4 /* battle2.png */,
-				BF4C4FF71D9D017200D298E4 /* adjust4.png */,
-				BF4C4FF11D9CFE4C00D298E4 /* setup2.png */,
-				BFB4C7901DD48924003D0880 /* pokemonData.csv */,
+				BF0F5F401EE0205C001C8481 /* Backgrounds */,
+				BF0F5F421EE02086001C8481 /* Data */,
+				BF0F5F3F1EE0202A001C8481 /* Navigate Icons */,
+				BF6F2CEC1E27A1F30052CCCF /* View Controllers */,
 				BFB4C7921DD48999003D0880 /* iconxy */,
-				BF9622AA1D93FC380010812A /* adjust.png */,
-				BF9622A81D93FC2D0010812A /* setup.png */,
-				BF9622A61D93FC240010812A /* battle.png */,
-				BF96229E1D93F1220010812A /* dot.png */,
-				BFDA724A1C10573F0096BE82 /* AppDelegate.swift */,
-				BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */,
-				BFDA724C1C10573F0096BE82 /* FirstViewController.swift */,
-				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
-				BFB4C78E1DD48561003D0880 /* SecondViewController.swift */,
-				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
-				BFB4CEA71DD492E0003D0880 /* iconload.swift */,
-				BFDA727A1C10618A0096BE82 /* ThirdViewController.swift */,
-				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
-				BFDA727C1C1061C00096BE82 /* FourthViewController.swift */,
-				BFA4375A1D78448C00181553 /* FormatViewController.swift */,
-				BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */,
-				BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */,
-				BFDA72501C10573F0096BE82 /* Main.storyboard */,
 				BFDA72531C10573F0096BE82 /* Assets.xcassets */,
-				BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */,
 				BFDA72581C10573F0096BE82 /* Info.plist */,
+				BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */,
+				BFDA72501C10573F0096BE82 /* Main.storyboard */,
 			);
 			path = "ぽけメモ2";
 			sourceTree = "<group>";
@@ -2901,8 +3012,8 @@
 		BFDA72601C10573F0096BE82 /* ぽけメモ2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BFDA72611C10573F0096BE82 /* _____2Tests.swift */,
 				BFDA72631C10573F0096BE82 /* Info.plist */,
+				BFDA72611C10573F0096BE82 /* _____2Tests.swift */,
 			);
 			path = "ぽけメモ2Tests";
 			sourceTree = "<group>";
@@ -2910,8 +3021,8 @@
 		BFDA726B1C10573F0096BE82 /* ぽけメモ2UITests */ = {
 			isa = PBXGroup;
 			children = (
-				BFDA726C1C10573F0096BE82 /* _____2UITests.swift */,
 				BFDA726E1C10573F0096BE82 /* Info.plist */,
+				BFDA726C1C10573F0096BE82 /* _____2UITests.swift */,
 			);
 			path = "ぽけメモ2UITests";
 			sourceTree = "<group>";
@@ -2983,13 +3094,16 @@
 				TargetAttributes = {
 					BFDA72461C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 					};
 					BFDA725C1C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = BFDA72461C10573F0096BE82;
 					};
 					BFDA72671C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = BFDA72461C10573F0096BE82;
 					};
 				};
@@ -3415,6 +3529,7 @@
 				BFB4CC4A1DD489A0003D0880 /* 249.png in Resources */,
 				BFB4CE961DD489A0003D0880 /* 709.png in Resources */,
 				BFB4CCEF1DD489A0003D0880 /* 386s.png in Resources */,
+				BF12879E1E8018940040119E /* rokkakkei.png in Resources */,
 				BFB4CC0C1DD489A0003D0880 /* 201r.png in Resources */,
 				BFB4CB221DD489A0003D0880 /* 005.png in Resources */,
 				BFB4CDDF1DD489A0003D0880 /* 584.png in Resources */,
@@ -3962,19 +4077,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB4C78F1DD48561003D0880 /* SecondViewController.swift in Sources */,
+				BFB4C78F1DD48561003D0880 /* BattleViewController.swift in Sources */,
 				BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */,
 				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
 				BFB4CEA81DD492E0003D0880 /* iconload.swift in Sources */,
 				BFA4375B1D78448C00181553 /* FormatViewController.swift in Sources */,
 				BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */,
-				BFDA727B1C10618A0096BE82 /* ThirdViewController.swift in Sources */,
+				BFDA727B1C10618A0096BE82 /* AdjustViewController.swift in Sources */,
 				BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */,
+				BF6F2CEB1E27A1CD0052CCCF /* TableViewRootCell.swift in Sources */,
 				BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */,
-				BFDA727D1C1061C00096BE82 /* FourthViewController.swift in Sources */,
+				BFDA727D1C1061C00096BE82 /* SetupViewController.swift in Sources */,
 				BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */,
-				BFDA724D1C10573F0096BE82 /* FirstViewController.swift in Sources */,
+				BFDA724D1C10573F0096BE82 /* PartyViewController.swift in Sources */,
+				BF6F2CEE1E27A25F0052CCCF /* ViewController.swift in Sources */,
+				BFB4CEAA1DF0355C003D0880 /* CustomHeaderFooterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4016,6 +4134,7 @@
 				BFDA72511C10573F0096BE82 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		BFDA72551C10573F0096BE82 /* LaunchScreen.storyboard */ = {
@@ -4024,6 +4143,7 @@
 				BFDA72561C10573F0096BE82 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -4118,6 +4238,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -4129,6 +4250,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -4140,6 +4262,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ぽけメモ2.app/ぽけメモ2";
 			};
 			name = Debug;
@@ -4152,6 +4275,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ぽけメモ2.app/ぽけメモ2";
 			};
 			name = Release;
@@ -4163,6 +4287,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ぽけメモ2";
 				USES_XCTRUNNER = YES;
 			};
@@ -4175,6 +4300,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ぽけメモ2";
 				USES_XCTRUNNER = YES;
 			};
