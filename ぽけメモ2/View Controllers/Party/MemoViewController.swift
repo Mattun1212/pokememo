@@ -26,6 +26,15 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
     var tappedCellIndex: Int = 0
     var saveIndex: Int!
     
+    
+    
+    @IBOutlet weak var firstTextField: UITextField!
+    @IBOutlet weak var secondTextField: UITextField!
+    @IBOutlet weak var thirdTextField: UITextField!
+    @IBOutlet weak var fourthTextField: UITextField!
+    @IBOutlet weak var fifthTextField: UITextField!
+    @IBOutlet weak var sixthTextField: UITextField!
+    
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentTextView: UITextView!
     

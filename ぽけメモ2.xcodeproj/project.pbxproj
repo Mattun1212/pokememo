@@ -1902,10 +1902,10 @@
 		BFDA72561C10573F0096BE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDA72581C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA725D1C10573F0096BE82 /* ぽけメモ2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2Tests.swift; sourceTree = "<group>"; };
+		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2Tests.swift"; sourceTree = "<group>"; };
 		BFDA72631C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA72681C10573F0096BE82 /* ぽけメモ2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2UITests.swift; sourceTree = "<group>"; };
+		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2UITests.swift"; sourceTree = "<group>"; };
 		BFDA726E1C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustViewController.swift; sourceTree = "<group>"; };
 		BFDA727C1C1061C00096BE82 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
@@ -1944,7 +1944,6 @@
 				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
 				BFDA724C1C10573F0096BE82 /* PartyViewController.swift */,
 			);
-			name = Party;
 			path = Party;
 			sourceTree = "<group>";
 		};
@@ -1954,7 +1953,6 @@
 				BFB4C78E1DD48561003D0880 /* BattleViewController.swift */,
 				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
 			);
-			name = Battle;
 			path = Battle;
 			sourceTree = "<group>";
 		};
@@ -1963,7 +1961,6 @@
 			children = (
 				BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */,
 			);
-			name = Adjust;
 			path = Adjust;
 			sourceTree = "<group>";
 		};
@@ -1972,7 +1969,6 @@
 			children = (
 				BFDA727C1C1061C00096BE82 /* SetupViewController.swift */,
 			);
-			name = Setup;
 			path = Setup;
 			sourceTree = "<group>";
 		};
@@ -1985,7 +1981,6 @@
 				BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */,
 				BFB4CEA71DD492E0003D0880 /* iconload.swift */,
 			);
-			name = Others;
 			path = Others;
 			sourceTree = "<group>";
 		};
@@ -1994,7 +1989,6 @@
 			children = (
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
 			);
-			name = Cell;
 			path = Cell;
 			sourceTree = "<group>";
 		};
@@ -2005,7 +1999,6 @@
 				BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */,
 				BF6F2CED1E27A25F0052CCCF /* ViewController.swift */,
 			);
-			name = Accordion;
 			path = Accordion;
 			sourceTree = "<group>";
 		};
@@ -2021,7 +2014,6 @@
 				BF9622A81D93FC2D0010812A /* setup.png */,
 				BF4C4FF11D9CFE4C00D298E4 /* setup2.png */,
 			);
-			name = "Navigate Icons";
 			path = "Navigate Icons";
 			sourceTree = "<group>";
 		};
@@ -2031,7 +2023,6 @@
 				BF12879D1E8018940040119E /* rokkakkei.png */,
 				BF4C4FFB1D9D1B1600D298E4 /* start.png */,
 			);
-			name = Backgrounds;
 			path = Backgrounds;
 			sourceTree = "<group>";
 		};
@@ -2041,7 +2032,6 @@
 				BFB4C7901DD48924003D0880 /* pokemonData.csv */,
 				BF4C4FFF1D9D1FE400D298E4 /* ヒラギノ角ゴ Std W8.otf */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -2056,7 +2046,6 @@
 				BF0F5F381EE01D7B001C8481 /* Party */,
 				BF0F5F3B1EE01E0C001C8481 /* Setup */,
 			);
-			name = "View Controllers";
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
@@ -3094,6 +3083,7 @@
 				TargetAttributes = {
 					BFDA72461C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = RBP27NV52N;
 						LastSwiftMigration = 0820;
 					};
 					BFDA725C1C10573F0096BE82 = {
@@ -4234,11 +4224,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RBP27NV52N;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -4246,11 +4239,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RBP27NV52N;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.koutajohoku.-----2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
