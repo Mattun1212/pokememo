@@ -27,6 +27,26 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
     var saveIndex: Int!
     
     
+    var firstSingleArray = [String]()
+    var secondSingleArray = [String]()
+    var thirdSigleArray = [String]()
+    var forthSingleArray = [String]()
+    var fifthSingleArray = [String]()
+    var sixthSingleArray = [String]()
+    var firstDoubleArray = [String]()
+    var secondDoubleArray = [String]()
+    var thirdDoubleArray = [String]()
+    var forthDoubleArray = [String]()
+    var fifthDoubleArray = [String]()
+    var sixthDoubleArray = [String]()
+    var firstTripleeArray = [String]()
+    var secondTripleArray = [String]()
+    var thirdTripleArray = [String]()
+    var forthTripleArray = [String]()
+    var fifthTripleArray = [String]()
+    var sixthTripleArray = [String]()
+
+    
     
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
@@ -43,6 +63,15 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstTextField.delegate = self
+        secondTextField.delegate = self
+        thirdTextField.delegate = self
+        fourthTextField.delegate = self
+        fifthTextField.delegate = self
+        sixthTextField.delegate = self
+        
+
         if saveIndex == 0 {
         if saveData.array(forKey: "titleSingleArray") != nil {
             titleSingleArray = saveData.array(forKey: "titleSingleArray") as! [String]
@@ -139,6 +168,14 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
                 if selectedIndex != nil {
                     titleSingleArray[selectedIndex!] = titleTextField.text!
                     contentSingleArray[selectedIndex!] = contentTextView.text!
+                    firstSingleArray[selectedIndex!] = titleTextField.text!
+                    secondSingleArray[selectedIndex!] = titleTextField.text!
+                    thirdSigleArray[selectedIndex!] = titleTextField.text!
+                    forthSingleArray[selectedIndex!] = titleTextField.text!
+                    fifthSingleArray[selectedIndex!] = titleTextField.text!
+                    sixthSingleArray[selectedIndex!] = titleTextField.text!
+                    
+                    
                 
                 if titleTextField.text != ""{
                     saveData.set(titleSingleArray, forKey: "titleSingleArray")
@@ -259,6 +296,8 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
             saveData.set(partycontentTripleArray, forKey: "partycontentTripleArray")
             
         }
+        
+    
 
 
         }

@@ -40,11 +40,14 @@ import UIKit
 
 ///Partyのデータが入るクラス
 class PartyInfo{
+    var selectedIndex: Int?
+    let saveData: UserDefaults = UserDefaults.standard
     var pokemonNameArray:[[String]]!
     var pokemonContentArray:[[String]]!
-    
+    var saveIndex: Int!
     var partyTitleArray:[String]!
     var partyContentArray:[String]!
+    
     
     init() {
         self.pokemonNameArray = [[String]]()
@@ -53,19 +56,102 @@ class PartyInfo{
         self.partyContentArray = [String]()
     }
     
-    
-    func testOfDataSave(){
-        self.pokemonNameArray = [
-            ["ピカチュウ","カビゴン","コイキング"],
-            ["犬","猿","キジ"]
-        ]
-        self.pokemonContentArray = [
-            ["ネズミ","",""]
-        ]
-        
-        self.partyTitleArray = ["まっつん", "桃太郎"]
-        self.partyContentArray = ["強い","鬼"]
+    func NameSave()  {
+        if saveIndex == 0 {
+            if saveData.array(forKey: "titleSingleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "titleSingleArray") as! [String]
+               // contentSingleArray = saveData.array(forKey: "contentSingleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                FirstTextField.text! = partyTitleArray[selectedIndex!]
+               // contentTextView.text! = contentSingleArray[selectedIndex!]
+                
+            }
+            if saveData.array(forKey: "partytitleSingleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "partytitleSingleArray") as! [String]
+                //contentSingleArray = saveData.array(forKey: "partycontentSingleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                titleTextField.text! = partyTitleArray[selectedIndex!]
+               // contentTextView.text! = partycontentSingleArray[selectedIndex!]
+                
+            }
+            
+            
+        }
+        if saveIndex == 1 {
+            if saveData.array(forKey: "titleDoubleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "titleDoubleArray") as! [String]
+               // contentDoubleArray = saveData.array(forKey: "contentDoubleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                titleTextField.text! = partyTitleArray[selectedIndex!]
+               // contentTextView.text! = contentDoubleArray[selectedIndex!]
+                
+            }
+            
+            if saveData.array(forKey: "partytitleDoubleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "partytitleDoubleArray") as! [String]
+              //  contentDoubleArray = saveData.array(forKey: "partycontentDoubleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                titleTextField.text! = partyTitleArray[selectedIndex!]
+               // contentTextView.text! = partycontentDoubleArray[selectedIndex!]
+                
+            }
+            
+            
+        }
+        if saveIndex == 2 {
+            if saveData.array(forKey: "titleTripleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "titleTripleArray") as! [String]
+               // contentTripleArray = saveData.array(forKey: "contentTripleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                titleTextField.text! = partyTitleArray[selectedIndex!]
+               // contentTextView.text! = contentTripleArray[selectedIndex!]
+               
+            }
+            
+            if saveData.array(forKey: "partytitleTripleArray") != nil {
+                partyTitleArray = saveData.array(forKey: "partytitleTripleArray") as! [String]
+                //contentTripleArray = saveData.array(forKey: "partycontentTripleArray") as! [String]
+            }
+            
+            
+            if selectedIndex != nil{
+                titleTextField.text! = partyTitleArray[selectedIndex!]
+              //  contentTextView.text! = partycontentTripleArray[selectedIndex!]
+                
+            }
+            
+        }
+       
     }
+    
+    
+//    func testOfDataSave(){
+//        self.pokemonNameArray = [
+//            ["ピカチュウ","カビゴン","コイキング"],
+//            ["犬","猿","キジ"]
+//        ]
+//        self.pokemonContentArray = [
+//            ["ネズミ","",""]
+//        ]
+//        
+//        self.partyTitleArray = ["まっつん", "桃太郎"]
+//        self.partyContentArray = ["強い","鬼"]
+//    }
 }
 
 
@@ -103,6 +189,14 @@ class SaveClass {
     
     func savePartyInfo(partyInfo:PartyInfo) {
         UserDefaults.standard.set(partyInfo, forKey: keyOfUserDefault!)
+        
+//        FirstViewController.sendText.append(self.firstTextField.text!)
+//        FirstViewController.sendText.append(self.secondTextField.text!)
+//        FirstViewController.sendText.append(self.thirdTextField.text!)
+//        FirstViewController.sendText.append(self.fourthTextField.text!)
+//        FirstViewController.sendText.append(self.fifthTextField.text!)
+//        FirstViewController.sendText.append(self.sixthTextField.text!)
+
     }
     
 }
@@ -148,7 +242,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     ///初めて画面を表示する時に呼ばれるクラス
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         //editButtonItemを左に置くとnavigationで戻れなくなるよー
         //        navigationItem.leftBarButtonItem = editButtonItem
         
@@ -174,7 +268,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         partyInfo = saveData.getPartyInfo()
         print("partyInfo::\(partyInfo)")
         //データを一時的に代入するテスト関数
-        partyInfo.testOfDataSave()
+        partyInfo.NameSave()
+//        partyInfo.testOfDataSave()
         
     }
     
