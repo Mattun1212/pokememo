@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF12879E1E8018940040119E /* rokkakkei.png in Resources */ = {isa = PBXBuildFile; fileRef = BF12879D1E8018940040119E /* rokkakkei.png */; };
 		BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */; };
+		BF2512041F1773FC007C685D /* PartyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2512031F1773FC007C685D /* PartyInfo.swift */; };
 		BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */; };
 		BF2ED54A1DAF863E00F8FAEF /* monsterball.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2ED5491DAF863E00F8FAEF /* monsterball.png */; };
 		BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */; };
@@ -967,6 +968,7 @@
 /* Begin PBXFileReference section */
 		BF12879D1E8018940040119E /* rokkakkei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rokkakkei.png; path = ../../../rokkakkei.png; sourceTree = "<group>"; };
 		BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		BF2512031F1773FC007C685D /* PartyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyInfo.swift; path = "ぽけメモ2/PartyInfo.swift"; sourceTree = SOURCE_ROOT; };
 		BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterballViewControllor.swift; sourceTree = "<group>"; };
 		BF2ED5491DAF863E00F8FAEF /* monsterball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monsterball.png; sourceTree = "<group>"; };
 		BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
@@ -1988,6 +1990,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
+				BF0F5F3F1EE0202A001C8481 /* Navigate Icons */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2014,7 +2017,8 @@
 				BF9622A81D93FC2D0010812A /* setup.png */,
 				BF4C4FF11D9CFE4C00D298E4 /* setup2.png */,
 			);
-			path = "Navigate Icons";
+			name = "Navigate Icons";
+			path = "../../Navigate Icons";
 			sourceTree = "<group>";
 		};
 		BF0F5F401EE0205C001C8481 /* Backgrounds */ = {
@@ -2985,9 +2989,9 @@
 		BFDA72491C10573F0096BE82 /* ぽけメモ2 */ = {
 			isa = PBXGroup;
 			children = (
+				BF2512031F1773FC007C685D /* PartyInfo.swift */,
 				BF0F5F401EE0205C001C8481 /* Backgrounds */,
 				BF0F5F421EE02086001C8481 /* Data */,
-				BF0F5F3F1EE0202A001C8481 /* Navigate Icons */,
 				BF6F2CEC1E27A1F30052CCCF /* View Controllers */,
 				BFB4C7921DD48999003D0880 /* iconxy */,
 				BFDA72531C10573F0096BE82 /* Assets.xcassets */,
@@ -4067,6 +4071,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2512041F1773FC007C685D /* PartyInfo.swift in Sources */,
 				BFB4C78F1DD48561003D0880 /* BattleViewController.swift in Sources */,
 				BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */,
 				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
