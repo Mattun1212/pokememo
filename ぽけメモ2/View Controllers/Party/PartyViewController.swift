@@ -16,31 +16,7 @@
 
 
 import UIKit
-
-
-
-
-
-
-/*
- データを扱いやすくするクラスを作ったよー
- 
- - 今まで: UserDelaultに配列をそれぞれ保存してた
- - これから: PartyInfo というクラスでひとまとまりにしながら保存していく
- 
- メリット→userDefalutのキーの数が一気に減る
- 変数名.pokemonNameArray って感じで扱えるようになる
- 
- -PartyInfo:
- 
- */
-
-//MARK: - NewClass
-
-
-
-
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+import RealmSwift
 
 
 
@@ -66,6 +42,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //userDafaultのデータ扱うクラス
     var saveData:SaveClass!
     var partyInfo:PartyInfo!
+    
+    var savedPartyInfo:Results<PartyInfo>?
     
     //表示を変更するsectionのrowの数
     var rowNum:Int!
@@ -102,7 +80,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         saveData = SaveClass(recieveIndex: recieveIndex!)
         
         //保存してるpartyの情報を取得
-        partyInfo = saveData.getPartyInfo()
+        savedPartyInfo = saveData.getPartyInfo()
         print("partyInfo::\(partyInfo)")
         //データを一時的に代入するテスト関数
         //partyInfo.NameSave()

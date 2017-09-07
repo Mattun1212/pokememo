@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		684E46628EBCC242EB08247E /* Pods______2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1268B4393A3C7C36065887F /* Pods______2UITests.framework */; };
 		74EEC340B7BED96309BB4E0B /* Pods______2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589CC44359BA9F23ACEE495B /* Pods______2Tests.framework */; };
-		BF12879E1E8018940040119E /* rokkakkei.png in Resources */ = {isa = PBXBuildFile; fileRef = BF12879D1E8018940040119E /* rokkakkei.png */; };
 		BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */; };
 		BF2512041F1773FC007C685D /* PartyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2512031F1773FC007C685D /* PartyInfo.swift */; };
 		BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */; };
@@ -970,12 +969,11 @@
 
 /* Begin PBXFileReference section */
 		0AC2C6DFCD40A3A515C99984 /* Pods-ぽけメモ2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2Tests/Pods-ぽけメモ2Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		39A5053B2EFC16BA9A1978BE /* Pods______2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		589CC44359BA9F23ACEE495B /* Pods______2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39A5053B2EFC16BA9A1978BE /* Pods______2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		589CC44359BA9F23ACEE495B /* Pods______2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______2Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72138480DAD178EE9C475B82 /* Pods-ぽけメモ2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2/Pods-ぽけメモ2.release.xcconfig"; sourceTree = "<group>"; };
 		902D1CE76E114CD22EB663F6 /* Pods-ぽけメモ2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2Tests/Pods-ぽけメモ2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9F7C9ED96B78652A6B9862E1 /* Pods-ぽけメモ2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2UITests/Pods-ぽけメモ2UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF12879D1E8018940040119E /* rokkakkei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rokkakkei.png; path = ../../../rokkakkei.png; sourceTree = "<group>"; };
 		BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		BF2512031F1773FC007C685D /* PartyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyInfo.swift; path = "ぽけメモ2/PartyInfo.swift"; sourceTree = SOURCE_ROOT; };
 		BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterballViewControllor.swift; sourceTree = "<group>"; };
@@ -1913,16 +1911,16 @@
 		BFDA72561C10573F0096BE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDA72581C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA725D1C10573F0096BE82 /* ぽけメモ2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2Tests.swift; sourceTree = "<group>"; };
+		BFDA72611C10573F0096BE82 /* _____2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2Tests.swift"; sourceTree = "<group>"; };
 		BFDA72631C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA72681C10573F0096BE82 /* ぽけメモ2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ぽけメモ2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____2UITests.swift; sourceTree = "<group>"; };
+		BFDA726C1C10573F0096BE82 /* _____2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____2UITests.swift"; sourceTree = "<group>"; };
 		BFDA726E1C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustViewController.swift; sourceTree = "<group>"; };
 		BFDA727C1C1061C00096BE82 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextTableCell.swift; sourceTree = "<group>"; };
 		D5C25DC100CB2331B1F656BA /* Pods-ぽけメモ2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2/Pods-ぽけメモ2.debug.xcconfig"; sourceTree = "<group>"; };
-		E1268B4393A3C7C36065887F /* Pods______2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1268B4393A3C7C36065887F /* Pods______2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______2UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB258E959FA955D20D76DF6A /* Pods-ぽけメモ2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2UITests/Pods-ぽけメモ2UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2062,7 +2060,6 @@
 		BF0F5F401EE0205C001C8481 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				BF12879D1E8018940040119E /* rokkakkei.png */,
 				BF4C4FFB1D9D1B1600D298E4 /* start.png */,
 			);
 			path = Backgrounds;
@@ -3136,7 +3133,7 @@
 				TargetAttributes = {
 					BFDA72461C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = RBP27NV52N;
+						DevelopmentTeam = L658J8KRQ5;
 						LastSwiftMigration = 0820;
 					};
 					BFDA725C1C10573F0096BE82 = {
@@ -3151,7 +3148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BFDA72421C10573F0096BE82 /* Build configuration list for PBXProject "ぽけメモ2" */;
+			buildConfigurationList = BFDA72421C10573F0096BE82 /* Build configuration list for PBXProject "ぽけメモ2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -3572,7 +3569,6 @@
 				BFB4CC4A1DD489A0003D0880 /* 249.png in Resources */,
 				BFB4CE961DD489A0003D0880 /* 709.png in Resources */,
 				BFB4CCEF1DD489A0003D0880 /* 386s.png in Resources */,
-				BF12879E1E8018940040119E /* rokkakkei.png in Resources */,
 				BFB4CC0C1DD489A0003D0880 /* 201r.png in Resources */,
 				BFB4CB221DD489A0003D0880 /* 005.png in Resources */,
 				BFB4CDDF1DD489A0003D0880 /* 584.png in Resources */,
@@ -4417,7 +4413,7 @@
 			baseConfigurationReference = D5C25DC100CB2331B1F656BA /* Pods-ぽけメモ2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RBP27NV52N;
+				DEVELOPMENT_TEAM = L658J8KRQ5;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4433,7 +4429,7 @@
 			baseConfigurationReference = 72138480DAD178EE9C475B82 /* Pods-ぽけメモ2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RBP27NV52N;
+				DEVELOPMENT_TEAM = L658J8KRQ5;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4503,7 +4499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BFDA72421C10573F0096BE82 /* Build configuration list for PBXProject "ぽけメモ2" */ = {
+		BFDA72421C10573F0096BE82 /* Build configuration list for PBXProject "ぽけメモ2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFDA726F1C10573F0096BE82 /* Debug */,
