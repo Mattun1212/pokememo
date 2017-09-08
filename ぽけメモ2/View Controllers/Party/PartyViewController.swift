@@ -8,8 +8,6 @@
 /*
  - memoに遷移して戻ってくるとsection内が空っぽになる → recieveIndex に値が入ってない
  
- 
- 
  */
 
 
@@ -66,6 +64,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         
         
+        
+        
         let userDefault = UserDefaults.standard
         //下2行の意味は？
 //        let appDomain:String = Bundle.main.bundleIdentifier!
@@ -78,10 +78,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         //扱う分類の設定 0:Single, 1:Double, 2:Triple
         saveData = SaveClass(recieveIndex: recieveIndex!)
-        
+    
         //保存してるpartyの情報を取得
         savedPartyInfo = saveData.getPartyInfo()
-        print("partyInfo::\(partyInfo)")
+        print("partyInfo::\(savedPartyInfo)")
+        
+        tableView.reloadData()
         //データを一時的に代入するテスト関数
         //partyInfo.NameSave()
 //        partyInfo.testOfDataSave()
@@ -92,7 +94,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
 
-        saveData.savePartyInfo(partyInfo: partyInfo)
+//        saveData.savePartyInfo(partyInfo: partyInfo)
  
         
     }
@@ -128,8 +130,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func numberOfSections(in tableView: UITableView) -> Int {
         
         //セクション数を返す, partyTitleの個数分だけのセクションを用意する
-        print("partyInfo.partyTitleArray.count:\(partyInfo.partyTitleArray.count)")
-        return partyInfo.partyTitleArray.count
+//        print("partyInfo.partyTitleArray.count:\(partyInfo.partyTitleArray.count)")
+        print("savedPartyInfo?.count::\(savedPartyInfo?.count)")
+        
+        if savedPartyInfo == nil{
+            savedPartyInfo = partyInfo as? Results<PartyInfo>
+        }
+        return (savedPartyInfo?.count)!
     }
     
     ///section内のRowsの数
@@ -140,7 +147,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
          false -> 1にする(セクション名のところのみ)
          */
         //section名を入れる部分を追加するため+1
-        rowNum = partyInfo.pokemonNameArray[section].count + 1
+        rowNum = (savedPartyInfo?[section].pokemons.count)! + 1
         
         return isSectionExtended(section) ? rowNum : 1
     }
@@ -182,7 +189,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 //↓cellの内容設定
                 //partyTitleArray[indexPath.section]でデータを取得
-                cell.label.text = partyInfo.partyTitleArray[indexPath.section]
+                cell.label.text = savedPartyInfo?[indexPath.section].partyTitle
+    
                 //"Section \(indexPath.section)"
                 cell.backgroundColor = UIColor(white: CGFloat(0.5 - 0.5 * Double(indexPath.section) / Double(tableView.numberOfSections)), alpha: 1.0)
                 cell.label.textColor = UIColor.white
@@ -192,7 +200,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         } else {
             //indexPath.rowから1引いてやらないと行数が配列の個数超えるので気をつける
-            cell.textLabel?.text = partyInfo.pokemonNameArray[indexPath.section][indexPath.row-1]
+            cell.textLabel?.text = savedPartyInfo?[indexPath.section].pokemons[indexPath.row-1].name
+            
+            
+//            pokemonNameArray[indexPath.row-1]
             
         }
         return cell
@@ -202,7 +213,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     ///cellの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         
         let isRoot = indexPath.row == 0
         if isRoot {

@@ -9,16 +9,36 @@
 import Foundation
 import RealmSwift
 
+
+//Pokemonのclass
+class Pokemon: Object {
+    dynamic var name: String = ""
+    
+}
+
+
+
 //Partyのデータが入るクラス
 class PartyInfo: Object {
-    dynamic var selectedIndex: Int = 0
+    var selectedIndex: Int = 0
     let saveData: UserDefaults = UserDefaults.standard
     
-    dynamic var pokemonNameArray:[[String]]!
-    dynamic var pokemonContentArray:[[String]]!
-    dynamic var saveIndex: Int = 0
-    dynamic var partyTitleArray:[String]!
-    dynamic var partyContentArray:[String]!
+//    dynamic var pokemonNameArray:[[String]]!
+//    dynamic var pokemonContentArray:[[String]]!
+//    dynamic var saveIndex: Int = 0
+//    dynamic var partyTitleArray:[String]!
+//    dynamic var partyContentArray:[String]!
+    
+    dynamic var partyType:String = ""
+    dynamic var partyTitle:String = ""
+    dynamic var partyComment:String = ""
+    var pokemons = List<Pokemon>()
+    
+    
+//    dynamic var pokemonContentArray:[String]!
+//    dynamic var saveIndex: Int = 0
+    
+//    dynamic var partyContentArray:[String]!
     
     
 //    init(pokemonNameArray: [[String]], pokemonContentArray: [[String]] ,partyTitleArray: [String] ,partyContentArray:[String]) {
@@ -34,23 +54,23 @@ class PartyInfo: Object {
 ///UserDefalutsを扱いやすくするクラス。
 class SaveClass {
     
-    var keyOfUserDefault:String?
+    var partyType:String?
     
     init(recieveIndex:Int){
         var formatName:String?
         
         switch recieveIndex {
         case 0:
-            formatName = "SingleArray"
+            formatName = "Single"
         case 1:
-            formatName = "DoubleArray"
+            formatName = "Double"
         case 2:
-            formatName = "TripleArray"
+            formatName = "Triple"
         default:
             break
         }
         
-        self.keyOfUserDefault = formatName
+        self.partyType = formatName
         
     }
     
@@ -63,10 +83,17 @@ class SaveClass {
 //        }
         
         let realm = try! Realm()
+        let partyInfo:Results<PartyInfo>?
         
-        let partyInfo = realm.objects(PartyInfo)
+        print(partyType)
+//        if realm.objects(PartyInfo.self) != nil{
+             partyInfo = realm.objects(PartyInfo.self).filter("partyType == %@",partyType!)
+//        }
+       
         
-        return partyInfo 
+        print("aaaa")
+        
+        return partyInfo!
         
         
     }
