@@ -11,28 +11,26 @@ import UIKit
 class FormatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
-     var formatArray = [String]()
-    var tapIndex: Int!
+    
+    var formatArray = [String]()
+    var tapIndex: Int!  //tableViewでタップされた行を記録する
     let saveData: UserDefaults = UserDefaults.standard
+    
+    //最初に呼ばれるやつ
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.s
+        
         formatArray = ["シングル" , "ダブル", "WCS"]
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-       func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
+    //1セクションの中のRowの数を決める
+    func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
         return formatArray.count
     }
     
+    //どのCellを使って、Cellに何を表示するか決めるとこ
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = formatArray[indexPath.row]
@@ -40,6 +38,7 @@ class FormatViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell!
     }
     
+    //Cellがタップされたら反応するとこ
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("%@が選ばれました", formatArray[indexPath.row])
         tapIndex = indexPath.row
@@ -47,6 +46,7 @@ class FormatViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //遷移
         performSegue(withIdentifier: "toFirst", sender: nil)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
@@ -57,14 +57,4 @@ class FormatViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

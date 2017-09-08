@@ -9,6 +9,25 @@
 import Foundation
 import RealmSwift
 
+/*
+ ## realmの使い方
+ ここを確認しよう -> https://realm.io/jp/docs/swift/latest/
+ 
+ ## realmのいいところ
+ ・データベースとしてデータを扱いやすい
+ ・filterをかけてほしい情報だけ取得するのも簡単
+    ex> partyInfo = realm.objects(PartyInfo.self).filter("partyType == %@",partyType!)
+    partyType: Single, Double, ...などに応じて 上みたいな書き方でフィルターできる
+ 
+ ## 配列の扱いかた
+    realmにおいて配列はそのまま保存できない。代わりにListってのを使う。使い方は大体Arrayと一緒。
+ 
+ ## 注意点
+ realmで使うclassの中身(下でいうPokemonやPartyInfo)を変更したら、シミュレータや実機などでのポケメモのアプリは一旦削除してから、runすること。データベースの表が変わるから、そこでエラーが起きる。
+ 
+ 
+ */
+
 
 //Pokemonのclass
 class Pokemon: Object {
@@ -21,37 +40,17 @@ class Pokemon: Object {
 //Partyのデータが入るクラス
 class PartyInfo: Object {
     var selectedIndex: Int = 0
-    let saveData: UserDefaults = UserDefaults.standard
-    
-//    dynamic var pokemonNameArray:[[String]]!
-//    dynamic var pokemonContentArray:[[String]]!
-//    dynamic var saveIndex: Int = 0
-//    dynamic var partyTitleArray:[String]!
-//    dynamic var partyContentArray:[String]!
+//    let saveData: UserDefaults = UserDefaults.standard
     
     dynamic var partyType:String = ""
     dynamic var partyTitle:String = ""
     dynamic var partyComment:String = ""
-    var pokemons = List<Pokemon>()
-    
-    
-//    dynamic var pokemonContentArray:[String]!
-//    dynamic var saveIndex: Int = 0
-    
-//    dynamic var partyContentArray:[String]!
-    
-    
-//    init(pokemonNameArray: [[String]], pokemonContentArray: [[String]] ,partyTitleArray: [String] ,partyContentArray:[String]) {
-//        self.pokemonNameArray = pokemonNameArray
-//        self.pokemonContentArray = pokemonContentArray
-//        self.partyTitleArray = partyTitleArray
-//        self.partyContentArray = partyContentArray
-//    }
+    var pokemons = List<Pokemon>()  //配列の代わりにListを使う
     
 }
 
 
-///UserDefalutsを扱いやすくするクラス。
+///データの保存を扱いやすくするクラス。
 class SaveClass {
     
     var partyType:String?
@@ -75,40 +74,21 @@ class SaveClass {
     }
     
     func getPartyInfo() -> Results<PartyInfo> {
-//        if UserDefaults.standard.object(forKey: self.keyOfUserDefault!) != nil{
-//            return UserDefaults.standard.object(forKey: self.keyOfUserDefault!) as! PartyInfo
-//        }else{
-//            var newParty = PartyInfo(pokemonNameArray: [[String]](), pokemonContentArray: [[String]](),partyTitleArray: [String]() ,partyContentArray:[String]())
-//            return newParty
-//        }
-        
+
         let realm = try! Realm()
         let partyInfo:Results<PartyInfo>?
         
-        print(partyType)
-//        if realm.objects(PartyInfo.self) != nil{
-             partyInfo = realm.objects(PartyInfo.self).filter("partyType == %@",partyType!)
-//        }
-       
-        
-        print("aaaa")
-        
+        print("partyType: \(partyType)")
+
+        partyInfo = realm.objects(PartyInfo.self).filter("partyType == %@",partyType!)
+
         return partyInfo!
         
         
     }
     
     func savePartyInfo(partyInfo:PartyInfo) {
-        //partyInfoをセーブする。
-//        UserDefaults.standard.set(partyInfo, forKey: keyOfUserDefault!)
-        
-        //        FirstViewController.sendText.append(self.firstTextField.text!)
-        //        FirstViewController.sendText.append(self.secondTextField.text!)
-        //        FirstViewController.sendText.append(self.thirdTextField.text!)
-        //        FirstViewController.sendText.append(self.fourthTextField.text!)
-        //        FirstViewController.sendText.append(self.fifthTextField.text!)
-        //        FirstViewController.sendText.append(self.sixthTextField.text!)
-        
+        //partyInfoをセーブする。        
         let realm = try! Realm()
         
         try! realm.write {
