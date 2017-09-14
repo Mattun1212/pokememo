@@ -85,6 +85,7 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
             
             //入れた let pomemonをpokemonsって配列<List>に追加する
             partyInfo.pokemons.append(pokemon!)
+            
         }
         
         //全部情報入れたら保存する

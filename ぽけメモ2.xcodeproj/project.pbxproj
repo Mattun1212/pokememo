@@ -21,6 +21,7 @@
 		BF4C4FFC1D9D1B1600D298E4 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4C4FFB1D9D1B1600D298E4 /* start.png */; };
 		BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */; };
 		BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */; };
+		BF6B263F1F6A8F190012C2DF /* PokemonParaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B263E1F6A8F190012C2DF /* PokemonParaViewController.swift */; };
 		BF6F2CEB1E27A1CD0052CCCF /* TableViewRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */; };
 		BF6F2CEE1E27A25F0052CCCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CED1E27A25F0052CCCF /* ViewController.swift */; };
 		BF96229F1D93F1220010812A /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = BF96229E1D93F1220010812A /* dot.png */; };
@@ -988,6 +989,7 @@
 		BF4C4FFD1D9D1CF900D298E4 /* StartViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewControllor.swift; sourceTree = "<group>"; };
 		BF4C4FFF1D9D1FE400D298E4 /* ヒラギノ角ゴ Std W8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ角ゴ Std W8.otf"; sourceTree = "<group>"; };
 		BF4C50001D9D246500D298E4 /* CGAffineTransformAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAdditions.swift; sourceTree = "<group>"; };
+		BF6B263E1F6A8F190012C2DF /* PokemonParaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonParaViewController.swift; path = ../../PokemonParaViewController.swift; sourceTree = "<group>"; };
 		BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRootCell.swift; sourceTree = "<group>"; };
 		BF6F2CED1E27A25F0052CCCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF96229E1D93F1220010812A /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
@@ -1983,6 +1985,7 @@
 				BFA4375A1D78448C00181553 /* FormatViewController.swift */,
 				BF33F1661C5A376D00D22BC4 /* MemoViewController.swift */,
 				BFDA724C1C10573F0096BE82 /* PartyViewController.swift */,
+				BF6B263E1F6A8F190012C2DF /* PokemonParaViewController.swift */,
 			);
 			path = Party;
 			sourceTree = "<group>";
@@ -2028,7 +2031,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
-				BF0F5F3F1EE0202A001C8481 /* Navigate Icons */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2055,8 +2057,7 @@
 				BF9622A81D93FC2D0010812A /* setup.png */,
 				BF4C4FF11D9CFE4C00D298E4 /* setup2.png */,
 			);
-			name = "Navigate Icons";
-			path = "../../Navigate Icons";
+			path = "Navigate Icons";
 			sourceTree = "<group>";
 		};
 		BF0F5F401EE0205C001C8481 /* Backgrounds */ = {
@@ -3029,6 +3030,7 @@
 		BFDA72491C10573F0096BE82 /* ぽけメモ2 */ = {
 			isa = PBXGroup;
 			children = (
+				BF0F5F3F1EE0202A001C8481 /* Navigate Icons */,
 				BF2512031F1773FC007C685D /* PartyInfo.swift */,
 				BF0F5F401EE0205C001C8481 /* Backgrounds */,
 				BF0F5F421EE02086001C8481 /* Data */,
@@ -3136,7 +3138,7 @@
 				TargetAttributes = {
 					BFDA72461C10573F0096BE82 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = L658J8KRQ5;
+						DevelopmentTeam = RBP27NV52N;
 						LastSwiftMigration = 0820;
 					};
 					BFDA725C1C10573F0096BE82 = {
@@ -4275,6 +4277,7 @@
 				BFDA724D1C10573F0096BE82 /* PartyViewController.swift in Sources */,
 				BF6F2CEE1E27A25F0052CCCF /* ViewController.swift in Sources */,
 				BFB4CEAA1DF0355C003D0880 /* CustomHeaderFooterViewController.swift in Sources */,
+				BF6B263F1F6A8F190012C2DF /* PokemonParaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4417,7 +4420,7 @@
 			baseConfigurationReference = D5C25DC100CB2331B1F656BA /* Pods-ぽけメモ2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L658J8KRQ5;
+				DEVELOPMENT_TEAM = RBP27NV52N;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4433,7 +4436,7 @@
 			baseConfigurationReference = 72138480DAD178EE9C475B82 /* Pods-ぽけメモ2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L658J8KRQ5;
+				DEVELOPMENT_TEAM = RBP27NV52N;
 				INFOPLIST_FILE = "ぽけメモ2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

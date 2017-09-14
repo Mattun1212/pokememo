@@ -30,8 +30,20 @@ import RealmSwift
 
 
 //Pokemonのclass
+class EV:Object{
+    
+}
+
+
 class Pokemon: Object {
     dynamic var name: String = ""
+    dynamic var EV: = List<EV>()
+    dynamic var move: String = ""
+    dynamic var ability: String = ""
+    dynamic var nature: String = ""
+    dynamic var item: String = ""
+    
+    
     
 }
 

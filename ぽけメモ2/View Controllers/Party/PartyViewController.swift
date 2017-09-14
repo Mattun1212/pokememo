@@ -70,6 +70,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //扱う分類の設定 0:Single, 1:Double, 2:Triple
         saveData = SaveClass(recieveIndex: recieveIndex!)
+        
     
         //保存してるpartyの情報を取得
         savedPartyInfo = saveData.getPartyInfo()
