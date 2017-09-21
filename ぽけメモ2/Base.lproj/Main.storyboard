@@ -52,9 +52,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Snp-Ss-AaI" kind="push" id="aKa-Gz-zlh"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -74,11 +71,12 @@
                     <connections>
                         <outlet property="tableView" destination="xLb-fK-pZb" id="xVE-l1-VcT"/>
                         <segue destination="DHW-SY-fQ2" kind="push" identifier="toMemo" id="0MF-N0-gO1"/>
+                        <segue destination="Snp-Ss-AaI" kind="push" identifier="ToPara" id="pEv-sN-4D2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066" y="-1833"/>
+            <point key="canvasLocation" x="1977" y="-1833"/>
         </scene>
         <!--FORMAT-->
         <scene sceneID="0V1-KI-Hu1">
@@ -225,12 +223,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4E5-nY-FHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482" y="-1833"/>
+            <point key="canvasLocation" x="2458" y="-1833"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon Para View Controller-->
         <scene sceneID="sXn-oo-ZbV">
             <objects>
-                <viewController id="Snp-Ss-AaI" sceneMemberID="viewController">
+                <viewController id="Snp-Ss-AaI" customClass="PokemonParaViewController" customModule="ほ_けメモ2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bp3-Lp-eCm"/>
                         <viewControllerLayoutGuide type="bottom" id="JEe-5Q-pTr"/>
@@ -262,13 +260,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="攻撃努力値" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSo-Ih-8yR">
                                 <rect key="frame" x="57" y="317" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="252" borderStyle="roundedRect" placeholder="HP努力値" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPK-QY-Off">
-                                <rect key="frame" x="6" y="317" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -337,14 +328,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HP努力値" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-wF-eWn">
+                                <rect key="frame" x="5" y="317" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pqC-FW-44L"/>
+                    <connections>
+                        <outlet property="abilityTextField" destination="dP8-21-z8i" id="sGK-1t-X0Y"/>
+                        <outlet property="fifthEVTextField" destination="GZt-bB-qBf" id="Su1-iS-Xcl"/>
+                        <outlet property="firstEVTextField" destination="n1b-wF-eWn" id="wy7-yF-xMl"/>
+                        <outlet property="firstmoveTextField" destination="LGN-Y9-35e" id="bUs-52-a6F"/>
+                        <outlet property="fourthEVTextField" destination="03l-ZV-UsB" id="gR4-O9-j8b"/>
+                        <outlet property="fourthmoveTextField" destination="0iT-Ip-9u0" id="m9S-lx-MXk"/>
+                        <outlet property="itemTextField" destination="l0I-vn-Whl" id="kSM-Fj-la6"/>
+                        <outlet property="nameTextField" destination="qhp-FO-4xf" id="dDa-qo-CJN"/>
+                        <outlet property="natureTextField" destination="Gmk-gA-RTq" id="uHs-fq-kaj"/>
+                        <outlet property="secondEVTextField" destination="FSo-Ih-8yR" id="v0R-zi-YES"/>
+                        <outlet property="secondmoveTextField" destination="LO7-Li-3d2" id="aZ2-Tn-foj"/>
+                        <outlet property="sixthEVTextField" destination="lAp-63-5qW" id="svT-g9-Duc"/>
+                        <outlet property="thirdEVTextField" destination="jIK-ed-p2j" id="8aq-R5-r5j"/>
+                        <outlet property="thirdmoveTextField" destination="1e0-S1-dhg" id="gzU-HJ-yHv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnB-CF-CKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="-1833"/>
+            <point key="canvasLocation" x="2881" y="-1833"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">

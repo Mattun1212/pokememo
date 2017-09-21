@@ -50,7 +50,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //タップされたcellの行数
     var tappedCellIndex:Int!
     
-    
+    var sendPokemon:Pokemon?
     ///MARK: - <Normal>
     
     ///初めて画面を表示する時に呼ばれるクラス
@@ -94,12 +94,22 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //segueでの画面遷移前に呼ぶ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
-        let memoViewController = segue.destination as! MemoViewController
-        // ここに値渡しのコード
-        memoViewController.selectedIndex = tappedCellIndex
-        memoViewController.saveIndex = recieveIndex
+        if segue.identifier == "SecondView" {
+            let memoViewController = segue.destination as! MemoViewController
+            // ここに値渡しのコード
+            memoViewController.selectedIndex = tappedCellIndex
+            memoViewController.saveIndex = recieveIndex
+        }else{
+            let pokemonParaViewController = segue.destination as! PokemonParaViewController
+            pokemonParaViewController.pokemon = self.sendPokemon
+            pokemonParaViewController.saveIndex = self.recieveIndex!
+            
+ 
+        }
         
     }
+    
+    
     
     
     //ボタンをタップしたら
@@ -201,6 +211,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
         return cell
+        
+    
+       
+        
     }
     
     ///MARK: - <UITableViewDelegate>
@@ -224,6 +238,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let isRoot = indexPath.row == 0
         if isRoot {
             didSelectRootCell(indexPath.section)
+        }else{
+            var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
+            self.performSegue(withIdentifier: "ToPara", sender: nil)
+            
         }
     }
     

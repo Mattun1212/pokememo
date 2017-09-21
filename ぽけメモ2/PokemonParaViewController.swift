@@ -19,12 +19,14 @@ class PokemonParaViewController: UIViewController ,UITextFieldDelegate {
     
     var savedPartyInfo:Results<PartyInfo>?
     
+    var pokemon:Pokemon?
+    
     
     @IBOutlet weak var firstmoveTextField: UITextField!
     @IBOutlet weak var secondmoveTextField: UITextField!
     @IBOutlet weak var thirdmoveTextField: UITextField!
     @IBOutlet weak var fourthmoveTextField: UITextField!
-    
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var abilityTextField: UITextField!
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var natureTextField: UITextField!
@@ -43,6 +45,7 @@ class PokemonParaViewController: UIViewController ,UITextFieldDelegate {
     //最初に画面が表示されたら呼ばれるとこ
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(nameTextField)
         
         firstmoveTextField.delegate = self
         secondmoveTextField.delegate = self
@@ -50,6 +53,7 @@ class PokemonParaViewController: UIViewController ,UITextFieldDelegate {
         fourthmoveTextField.delegate = self
         abilityTextField.delegate = self
         itemTextField.delegate = self
+        nameTextField.delegate = self
         firstEVTextField.delegate = self
         secondEVTextField.delegate = self
         thirdEVTextField.delegate = self
@@ -81,6 +85,7 @@ class PokemonParaViewController: UIViewController ,UITextFieldDelegate {
         for i in 0..<9{
             //まずPokemonのクラスを用意
             let pokemon:Pokemon? = Pokemon()
+            
             
             //まず1つ.nameに入れていく
             switch i {
