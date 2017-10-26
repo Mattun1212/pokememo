@@ -10,6 +10,7 @@
 		618EC1891F62AD0B00BD7E56 /* rokkakei.png in Resources */ = {isa = PBXBuildFile; fileRef = 618EC1881F62AD0B00BD7E56 /* rokkakei.png */; };
 		684E46628EBCC242EB08247E /* Pods______2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1268B4393A3C7C36065887F /* Pods______2UITests.framework */; };
 		74EEC340B7BED96309BB4E0B /* Pods______2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589CC44359BA9F23ACEE495B /* Pods______2Tests.framework */; };
+		BF20B6781FA1EDCD0010550B /* ChoosePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20B6771FA1EDCD0010550B /* ChoosePartyViewController.swift */; };
 		BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */; };
 		BF2512041F1773FC007C685D /* PartyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2512031F1773FC007C685D /* PartyInfo.swift */; };
 		BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */; };
@@ -977,6 +978,7 @@
 		72138480DAD178EE9C475B82 /* Pods-ぽけメモ2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2/Pods-ぽけメモ2.release.xcconfig"; sourceTree = "<group>"; };
 		902D1CE76E114CD22EB663F6 /* Pods-ぽけメモ2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2Tests/Pods-ぽけメモ2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9F7C9ED96B78652A6B9862E1 /* Pods-ぽけメモ2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2UITests/Pods-ぽけメモ2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF20B6771FA1EDCD0010550B /* ChoosePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePartyViewController.swift; sourceTree = "<group>"; };
 		BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		BF2512031F1773FC007C685D /* PartyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyInfo.swift; path = "ぽけメモ2/PartyInfo.swift"; sourceTree = SOURCE_ROOT; };
 		BF2ED5471DAF861200F8FAEF /* MonsterballViewControllor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterballViewControllor.swift; sourceTree = "<group>"; };
@@ -1994,6 +1996,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB4C78E1DD48561003D0880 /* BattleViewController.swift */,
+				BF20B6771FA1EDCD0010550B /* ChoosePartyViewController.swift */,
 				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
 			);
 			path = Battle;
@@ -4266,6 +4269,7 @@
 				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
 				BFB4CEA81DD492E0003D0880 /* iconload.swift in Sources */,
+				BF20B6781FA1EDCD0010550B /* ChoosePartyViewController.swift in Sources */,
 				BFA4375B1D78448C00181553 /* FormatViewController.swift in Sources */,
 				BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */,
 				BFDA727B1C10618A0096BE82 /* AdjustViewController.swift in Sources */,

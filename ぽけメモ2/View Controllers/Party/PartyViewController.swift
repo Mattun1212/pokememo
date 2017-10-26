@@ -94,7 +94,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //segueでの画面遷移前に呼ぶ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
-        if segue.identifier == "SecondView" {
+        if segue.identifier == "toMemo" {
             let memoViewController = segue.destination as! MemoViewController
             // ここに値渡しのコード
             memoViewController.selectedIndex = tappedCellIndex

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import RealmSwift
+
 class ForecastViewController: UIViewController {
     
     @IBOutlet var firstbutton: UIButton!
