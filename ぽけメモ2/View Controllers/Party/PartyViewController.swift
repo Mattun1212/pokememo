@@ -295,13 +295,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     ///MARK: - InputTextTableCellDelegate
     
-    
+/////////////↓ここ何？//////////////////////////////////////////////////////////////////////////////////////////////
     func textFieldDidEndEditing(_ cell: InputTextTableCell, value: NSString) {
         let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
         NSLog("row = %d, value = %@", path!.row, value)
         
     }
-    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     
 }

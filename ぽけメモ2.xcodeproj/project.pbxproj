@@ -1997,6 +1997,7 @@
 			children = (
 				BFB4C78E1DD48561003D0880 /* BattleViewController.swift */,
 				BF20B6771FA1EDCD0010550B /* ChoosePartyViewController.swift */,
+				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
 				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
 			);
 			path = Battle;
@@ -2033,7 +2034,6 @@
 		BF0F5F3D1EE01F1E001C8481 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
