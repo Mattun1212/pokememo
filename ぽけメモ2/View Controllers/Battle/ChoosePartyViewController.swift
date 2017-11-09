@@ -15,48 +15,51 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         didSet{
             tableView.delegate = self
             tableView.dataSource = self
-
-           
+            
+            
         }
     }
     
     
-    fileprivate let PartyCellIdentifier = "PartyCellIdentifier"
+    let nib = UINib(nibName: "PartyCell", bundle: nil)
+    
+    
+    let PartyCellIdentifier = "PartyCellIdentifier"
     //データ扱うクラス
     var saveData:SaveClass!
     var partyInfo: PartyInfo = PartyInfo()
     //Partyを扱うためのClass
-                //なんかあったとき用
+    //なんかあったとき用
     var savedPartyInfo:Results<PartyInfo>?  //Realmから取得したデータ用 PartyInfoの配列(ArrayじゃなくてResult型)
     
     var sendPokemon:Pokemon?
     
-   
-//    var formatArray = [String]()
+    var rowNum:Int!
+    //    var formatArray = [String]()
     var tapIndex: Int!  //tableViewでタップされた行を記録する
     
     //最初に呼ばれるやつ
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: PartyCellIdentifier)
-        
-   
-        
-        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: PartyCellIdentifier)
+        tableView.register(nib, forCellReuseIdentifier: "PartyCellIdentifier")
+    
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         
-//        //扱う分類の設定 0:Single, 1:Double, 2:Triple
-//        saveData = SaveClass(recieveIndex: recieveIndex!)
-//        
+        //        //扱う分類の設定 0:Single, 1:Double, 2:Triple
+        //        saveData = SaveClass(recieveIndex: recieveIndex!)
+        //
         //保存してるpartyの情報を取得
         savedPartyInfo = saveData.getPartyInfo()
         print("partyInfo::\(savedPartyInfo)")
         
-        tableView.reloadData()
+//        tableView.reloadData()
+        
+        
         //データを一時的に代入するテスト関数
         //partyInfo.NameSave()
         //        partyInfo.testOfDataSave()
@@ -64,37 +67,36 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     }
     ///MARK: - <UITableViewDataSource>
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //セクション数を返す, partyInfoの個数分,つまり、partyの数のセクションを用意する
         print("savedPartyInfo?.count::\(savedPartyInfo?.count)")
         
         if savedPartyInfo == nil{
             savedPartyInfo = partyInfo as? Results<PartyInfo>
         }
-        return (savedPartyInfo?.count)!
+        return 10//(savedPartyInfo?.count)!
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
-            self.performSegue(withIdentifier: "toBattle", sender: nil)
-            self.performSegue(withIdentifier: "ToPara", sender: nil)
-        }
+        //            var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
+        self.performSegue(withIdentifier: "toBattle", sender: nil)
+        
+    }
+    
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: PartyCellIdentifier, for: indexPath)
-       cell.textLabel?.text = savedPartyInfo?[indexPath.section].partyTitle
+        let cell = tableView.dequeueReusableCell(withIdentifier: PartyCellIdentifier, for: indexPath) as! PartyCell
+        cell.textLabel?.text = savedPartyInfo?[indexPath.section].partyTitle
         
         return cell
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return 1
-    }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
         if segue.identifier == "toBattle" {
@@ -107,8 +109,8 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
 }
-    
-    
+
+
 
 
 
