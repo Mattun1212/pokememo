@@ -3,7 +3,7 @@
 //  ぽけメモ2
 //
 //  Created by マツシタ コウタロウ on 2017/07/13.
-//  Copyright © 2017年 マツシタ コウタロウ. All rights reserved.saaasas
+//  Copyright © 2017年 マツシタ コウタロウ. All rights reserved.
 //
 
 import Foundation
