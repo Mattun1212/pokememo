@@ -54,7 +54,8 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         //        saveData = SaveClass(recieveIndex: recieveIndex!)
         //
         //保存してるpartyの情報を取得
-        savedPartyInfo = saveData.getPartyInfo()
+        saveData = SaveClass()
+        savedPartyInfo = saveData.getPartyInfoAll()
         print("partyInfo::\(savedPartyInfo)")
         
 //        tableView.reloadData()

@@ -82,7 +82,9 @@ class SaveClass {
         }
         
         self.partyType = formatName
-        
+    }
+    
+    init() {
     }
     
     func getPartyInfo() -> Results<PartyInfo> {
@@ -95,7 +97,17 @@ class SaveClass {
         partyInfo = realm.objects(PartyInfo.self).filter("partyType == %@",partyType!)
 
         return partyInfo!
+    }
+    
+    func getPartyInfoAll() -> Results<PartyInfo> {
+        let realm = try! Realm()
+        let partyInfo:Results<PartyInfo>?
         
+        print("partyType: \(partyType)")
+        
+        partyInfo = realm.objects(PartyInfo.self)
+        
+        return partyInfo!
         
     }
     
