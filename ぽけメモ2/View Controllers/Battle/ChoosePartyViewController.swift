@@ -54,11 +54,17 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         //        saveData = SaveClass(recieveIndex: recieveIndex!)
         //
         //保存してるpartyの情報を取得
-        saveData = SaveClass()
-        savedPartyInfo = saveData.getPartyInfoAll()
-        print("partyInfo::\(savedPartyInfo)")
         
-//        tableView.reloadData()
+        
+        
+        saveData = SaveClass()
+        
+        savedPartyInfo = saveData.getPartyInfoAll()
+        
+        
+//        print("partyInfo::\(savedPartyInfo)")
+        
+        tableView.reloadData()
         
         
         //データを一時的に代入するテスト関数
@@ -71,12 +77,17 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("savedPartyInfo?.count::\(savedPartyInfo?.count)")
+//        print("savedPartyInfo?.count::\(savedPartyInfo?.count)")
         
         if savedPartyInfo == nil{
             savedPartyInfo = partyInfo as? Results<PartyInfo>
+            
         }
-        return 10//(savedPartyInfo?.count)!
+        
+        rowNum = (savedPartyInfo?[section].pokemons.count)! + 1
+        
+    
+        return (savedPartyInfo?.count)! 
     }
     
     
@@ -104,11 +115,11 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
             let battleViewController = segue.destination as! SecondViewController
         }
         
-        if segue.identifier == "ToPara" {
-            let partyParaViewController = segue.destination as! PokemonParaViewController
-        }
-        
-    }
+//        if segue.identifier == "ToPara" {
+//            let partyParaViewController = segue.destination as! PokemonParaViewController
+//        }
+//        
+   }
 }
 
 
