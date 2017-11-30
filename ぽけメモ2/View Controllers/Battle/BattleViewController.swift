@@ -49,8 +49,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         if  segue.identifier == "SecondView" {
             let SecondViewController = segue.destination as! ForecastViewController
             
-            SecondViewController.sendText
-                .append(self.firstTextField.text!)
+            SecondViewController.sendText.append(self.firstTextField.text!)
             SecondViewController.sendText.append(self.secondTextField.text!)
             SecondViewController.sendText.append(self.thirdTextField.text!)
             SecondViewController.sendText.append(self.fourthTextField.text!)

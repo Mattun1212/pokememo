@@ -16,7 +16,6 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
             tableView.delegate = self
             tableView.dataSource = self
             
-            
         }
     }
     
@@ -62,8 +61,8 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         savedPartyInfo = saveData.getPartyInfoAll()
         
         
-//        print("partyInfo::\(savedPartyInfo)")
-        
+        print("partyInfo::\(savedPartyInfo)")
+    
         tableView.reloadData()
         
         
@@ -103,8 +102,7 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PartyCellIdentifier, for: indexPath) as! PartyCell
-        cell.textLabel?.text = savedPartyInfo?[indexPath.section].partyTitle
-        
+        cell.textLabel?.text = savedPartyInfo?[indexPath.row].partyTitle
         return cell
     }
     
