@@ -92,7 +92,7 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //            var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
+//        var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
         self.performSegue(withIdentifier: "toBattle", sender: nil)
         
     }
@@ -119,16 +119,6 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
 //        
    }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

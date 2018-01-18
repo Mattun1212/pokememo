@@ -35,8 +35,8 @@ class ForecastViewController: UIViewController {
         for i in  0..<loadText.count {
             
             for j in 0..<sendText.count{
-                if sendText[j] == loadText[i][1]{
-                    buttonArray[j].setBackgroundImage(UIImage(named: loadText[i][2]), for: UIControlState())
+                if sendText[j] == loadText[j][1]{
+                    buttonArray[j].setBackgroundImage(UIImage(named: loadText[j][2]), for: UIControlState())
                 }
             }
             
