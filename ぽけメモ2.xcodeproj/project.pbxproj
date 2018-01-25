@@ -25,8 +25,6 @@
 		BF6B263F1F6A8F190012C2DF /* PokemonParaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B263E1F6A8F190012C2DF /* PokemonParaViewController.swift */; };
 		BF6F2CEB1E27A1CD0052CCCF /* TableViewRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */; };
 		BF6F2CEE1E27A25F0052CCCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F2CED1E27A25F0052CCCF /* ViewController.swift */; };
-		BF8813061FB45D470023BDC7 /* PartyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8813051FB45D470023BDC7 /* PartyCell.xib */; };
-		BF8813081FB45DD40023BDC7 /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8813071FB45DD40023BDC7 /* PartyCell.swift */; };
 		BF96229F1D93F1220010812A /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = BF96229E1D93F1220010812A /* dot.png */; };
 		BF9622A71D93FC240010812A /* battle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622A61D93FC240010812A /* battle.png */; };
 		BF9622A91D93FC2D0010812A /* setup.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9622A81D93FC2D0010812A /* setup.png */; };
@@ -942,6 +940,8 @@
 		BFB4CEA61DD489A0003D0880 /* タマゴ.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4CB1C1DD489A0003D0880 /* タマゴ.png */; };
 		BFB4CEA81DD492E0003D0880 /* iconload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4CEA71DD492E0003D0880 /* iconload.swift */; };
 		BFB4CEAA1DF0355C003D0880 /* CustomHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4CEA91DF0355C003D0880 /* CustomHeaderFooterViewController.swift */; };
+		BFC508C52019CF45005A1415 /* PartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC508C32019CF45005A1415 /* PartyTableViewCell.swift */; };
+		BFC508C62019CF45005A1415 /* PartyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC508C42019CF45005A1415 /* PartyTableViewCell.xib */; };
 		BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724A1C10573F0096BE82 /* AppDelegate.swift */; };
 		BFDA724D1C10573F0096BE82 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA724C1C10573F0096BE82 /* PartyViewController.swift */; };
 		BFDA72521C10573F0096BE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA72501C10573F0096BE82 /* Main.storyboard */; };
@@ -996,8 +996,6 @@
 		BF6B263E1F6A8F190012C2DF /* PokemonParaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonParaViewController.swift; path = ../../PokemonParaViewController.swift; sourceTree = "<group>"; };
 		BF6F2CEA1E27A1CD0052CCCF /* TableViewRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRootCell.swift; sourceTree = "<group>"; };
 		BF6F2CED1E27A25F0052CCCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF8813051FB45D470023BDC7 /* PartyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyCell.xib; sourceTree = "<group>"; };
-		BF8813071FB45DD40023BDC7 /* PartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
 		BF96229E1D93F1220010812A /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		BF9622A61D93FC240010812A /* battle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battle.png; sourceTree = "<group>"; };
 		BF9622A81D93FC2D0010812A /* setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setup.png; sourceTree = "<group>"; };
@@ -1913,6 +1911,8 @@
 		BFB4CB1C1DD489A0003D0880 /* タマゴ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "タマゴ.png"; sourceTree = "<group>"; };
 		BFB4CEA71DD492E0003D0880 /* iconload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconload.swift; sourceTree = "<group>"; };
 		BFB4CEA91DF0355C003D0880 /* CustomHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderFooterViewController.swift; sourceTree = "<group>"; };
+		BFC508C32019CF45005A1415 /* PartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableViewCell.swift; sourceTree = "<group>"; };
+		BFC508C42019CF45005A1415 /* PartyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyTableViewCell.xib; sourceTree = "<group>"; };
 		BFDA72471C10573F0096BE82 /* ぽけメモ2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ぽけメモ2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDA724A1C10573F0096BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDA724C1C10573F0096BE82 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
@@ -2037,9 +2037,9 @@
 		BF0F5F3D1EE01F1E001C8481 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BF8813051FB45D470023BDC7 /* PartyCell.xib */,
-				BF8813071FB45DD40023BDC7 /* PartyCell.swift */,
 				BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */,
+				BFC508C32019CF45005A1415 /* PartyTableViewCell.swift */,
+				BFC508C42019CF45005A1415 /* PartyTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3631,7 +3631,6 @@
 				BFB4CB311DD489A0003D0880 /* 016.png in Resources */,
 				BFB4CD491DD489A0003D0880 /* 463.png in Resources */,
 				BFB4CE181DD489A0003D0880 /* 633.png in Resources */,
-				BF8813061FB45D470023BDC7 /* PartyCell.xib in Resources */,
 				BFB4CEA41DD489A0003D0880 /* 720.png in Resources */,
 				BFB4CBFB1DD489A0003D0880 /* 201a.png in Resources */,
 				BFB4CDDA1DD489A0003D0880 /* 579.png in Resources */,
@@ -3991,6 +3990,7 @@
 				BFB4CC561DD489A0003D0880 /* 259.png in Resources */,
 				BFB4CCA01DD489A0003D0880 /* 324.png in Resources */,
 				BFB4CC9B1DD489A0003D0880 /* 320.png in Resources */,
+				BFC508C62019CF45005A1415 /* PartyTableViewCell.xib in Resources */,
 				BFB4CD0E1DD489A0003D0880 /* 413sunachi.png in Resources */,
 				BFB4CDFE1DD489A0003D0880 /* 607.png in Resources */,
 				BFB4CD6B1DD489A0003D0880 /* 490.png in Resources */,
@@ -4274,9 +4274,9 @@
 				BFB4C78F1DD48561003D0880 /* BattleViewController.swift in Sources */,
 				BF4C50011D9D246500D298E4 /* CGAffineTransformAdditions.swift in Sources */,
 				BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */,
+				BFC508C52019CF45005A1415 /* PartyTableViewCell.swift in Sources */,
 				BFDA724B1C10573F0096BE82 /* AppDelegate.swift in Sources */,
 				BFB4CEA81DD492E0003D0880 /* iconload.swift in Sources */,
-				BF8813081FB45DD40023BDC7 /* PartyCell.swift in Sources */,
 				BF20B6781FA1EDCD0010550B /* ChoosePartyViewController.swift in Sources */,
 				BFA4375B1D78448C00181553 /* FormatViewController.swift in Sources */,
 				BF4C4FFE1D9D1CF900D298E4 /* StartViewControllor.swift in Sources */,

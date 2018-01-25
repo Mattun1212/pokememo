@@ -24,52 +24,47 @@ class ForecastViewController: UIViewController {
     var iconload = IconLoad()
     var loadText = [[String]]()
     var buttonArray:[UIButton]!
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(sendText)
+//        print(sendText)
         buttonArray = [firstbutton,secondbutton,thirdbutton,fourthbutton,fifthbutton,sixthbutton]
        loadText = iconload.loadcsv()
         
-        for i in  0..<loadText.count {
-            
+        for i in  0..<loadText.count-1 {
             for j in 0..<sendText.count{
-                if sendText[j] == loadText[j][1]{
-                    buttonArray[j].setBackgroundImage(UIImage(named: loadText[j][2]), for: UIControlState())
+                if sendText[j] == loadText[i][1]{
+                    buttonArray[j].setBackgroundImage(UIImage(named: loadText[i][2]), for: .normal)
+//                   print(buttonArray[j].backgroundImage(for: .normal) ?? )
+                    
                 }
             }
             
         }
         
         
-
-        
-
-        
     }
+    
+    @IBAction func buttonTapped(_ sender : Any){
+        for k in 0..<buttonArray.count{
+                count += 1
+                if(count%2 == 0){
+                    buttonArray[k].setTitleColor(UIColor.red, for: .normal)
+                }else{
+                    buttonArray[k].setTitleColor(UIColor.white, for: .normal)
+                }
+            }
+        }
+       
+    
 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-   
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
     
     
 }

@@ -13,14 +13,14 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var tableView: UITableView!{
         didSet{
+            
+            let nib = UINib(nibName: "PartyTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "PartyTableViewCell")
             tableView.delegate = self
             tableView.dataSource = self
-            
+            tableView.rowHeight = 60
         }
     }
-    
-    
-    let nib = UINib(nibName: "PartyCell", bundle: nil)
     
     
     let PartyCellIdentifier = "PartyCellIdentifier"
@@ -40,15 +40,12 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     //最初に呼ばれるやつ
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: PartyCellIdentifier)
-        tableView.register(nib, forCellReuseIdentifier: "PartyCellIdentifier")
-    
+
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
         //        //扱う分類の設定 0:Single, 1:Double, 2:Triple
         //        saveData = SaveClass(recieveIndex: recieveIndex!)
         //
@@ -96,13 +93,12 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         self.performSegue(withIdentifier: "toBattle", sender: nil)
         
     }
-    
-    
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PartyCellIdentifier, for: indexPath) as! PartyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PartyTableViewCell", for: indexPath) as! PartyTableViewCell
+        
         cell.textLabel?.text = savedPartyInfo?[indexPath.row].partyTitle
+
         return cell
     }
     

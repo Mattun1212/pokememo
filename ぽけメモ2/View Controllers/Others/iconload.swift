@@ -18,7 +18,7 @@ class IconLoad: NSObject {
             var csvData: String = try String(contentsOfFile: csvBundle!, encoding: String.Encoding.utf8)
             csvData = csvData.replacingOccurrences(of: "\r", with: "")
             let csvArray = csvData.components(separatedBy: "\n")
-            print(csvArray)
+//            print(csvArray)
             for line in csvArray {
                 let parts = line.components(separatedBy: ",")
                 
@@ -31,7 +31,7 @@ class IconLoad: NSObject {
                 count += 1
                 
             }
-            print(resultArray)
+//            print(resultArray)
             
         } catch let error as NSError {
             print(error.localizedDescription)
