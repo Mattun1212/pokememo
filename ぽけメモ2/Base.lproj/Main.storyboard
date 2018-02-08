@@ -477,6 +477,7 @@
                         <outlet property="fifthTextField" destination="Xyo-Sp-2fc" id="V7q-YH-TbL"/>
                         <outlet property="firstTextField" destination="rw8-F0-Uia" id="irp-RA-E4z"/>
                         <outlet property="fourthTextField" destination="9tX-WX-mpQ" id="I3H-tA-GZf"/>
+                        <outlet property="partydivide" destination="KDI-gE-HMA" id="31c-YW-kT5"/>
                         <outlet property="secondTextField" destination="SXn-Uy-Z90" id="PTT-sk-abJ"/>
                         <outlet property="sixthTextField" destination="FXR-1u-mYc" id="ROi-Mh-Ibf"/>
                         <outlet property="thirdTextField" destination="lms-co-kXV" id="bo5-Rs-yiS"/>
@@ -501,42 +502,75 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wje-8W-Vn0">
                                 <rect key="frame" x="43" y="103" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.1511083789969363" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99784637099999995" green="0.98487269099999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="P5l-wD-y4z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ND3-j2-EDI">
                                 <rect key="frame" x="193" y="103" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.2297599542874138" blue="0.035491296699044161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="Qu9-X7-yDz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-Tj-aC7">
                                 <rect key="frame" x="43" y="222" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.21361978363520606" blue="0.010591124193265022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="UJ4-DT-hhg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSe-7a-k02">
                                 <rect key="frame" x="193" y="222" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.24947239273036503" blue="0.025748845897962225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="5mF-j6-otr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-yl-mXu">
                                 <rect key="frame" x="43" y="346" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.27772986966940505" blue="0.025151177234692845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="ab3-D7-1TH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-mO-iqj">
                                 <rect key="frame" x="193" y="346" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.1609982179740389" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="I8g-5E-0Yt" eventType="touchUpInside" id="osY-af-n8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWk-uo-iki">
+                                <rect key="frame" x="137" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <segue destination="Fp0-do-Edq" kind="push" identifier="ToAnalyze" id="nYT-zS-P8p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5sz-Zo-EMi"/>
+                    <navigationItem key="navigationItem" id="5sz-Zo-EMi">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="6DG-6v-dFE">
+                            <connections>
+                                <action selector="clear:" destination="I8g-5E-0Yt" id="XTW-8d-D9e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fifthbutton" destination="L9f-yl-mXu" id="Wfh-67-2DR"/>
                         <outlet property="firstbutton" destination="wje-8W-Vn0" id="nPY-Wm-H6y"/>
                         <outlet property="fourthbutton" destination="BSe-7a-k02" id="3yp-wm-08T"/>
                         <outlet property="secondbutton" destination="ND3-j2-EDI" id="xUf-UL-JDE"/>
+                        <outlet property="seventhbutton" destination="KWk-uo-iki" id="lgU-gB-cma"/>
                         <outlet property="sixthbutton" destination="iM7-mO-iqj" id="bFK-qo-cN8"/>
                         <outlet property="thirdbutton" destination="6MW-Tj-aC7" id="Wsa-CS-Exe"/>
                     </connections>
@@ -544,6 +578,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVF-BL-ZHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2475" y="-1106"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CII-j4-0am">
+            <objects>
+                <viewController id="Fp0-do-Edq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q4b-6m-fH5"/>
+                        <viewControllerLayoutGuide type="bottom" id="U4N-77-CBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gSH-1p-3yN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fIE-pK-KZI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFf-g8-vqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2984" y="-1106"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GRe-74-mLh">

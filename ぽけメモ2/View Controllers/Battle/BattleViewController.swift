@@ -18,6 +18,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fourthTextField: UITextField!
     @IBOutlet weak var fifthTextField: UITextField!
     @IBOutlet weak var sixthTextField: UITextField!
+    @IBOutlet var partydivide: UISegmentedControl!
     
     var firstArray = [String]()
     var secondArray = [String]()
