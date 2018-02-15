@@ -109,6 +109,9 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
             let battleViewController = segue.destination as! SecondViewController
         }
         
+        
+        
+        
 //        if segue.identifier == "ToPara" {
 //            let partyParaViewController = segue.destination as! PokemonParaViewController
 //        }

@@ -951,6 +951,7 @@
 		BFDA726D1C10573F0096BE82 /* _____2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA726C1C10573F0096BE82 /* _____2UITests.swift */; };
 		BFDA727B1C10618A0096BE82 /* AdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */; };
 		BFDA727D1C1061C00096BE82 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDA727C1C1061C00096BE82 /* SetupViewController.swift */; };
+		BFE9DF7D202FA8CB00F4FEC1 /* ForecastDoubleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9DF7C202FA8CB00F4FEC1 /* ForecastDoubleViewController.swift */; };
 		BFF44C5B1C50F9F5007E29D2 /* InputTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */; };
 		C904A756F74FA1DD17C71B92 /* Pods______2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A5053B2EFC16BA9A1978BE /* Pods______2.framework */; };
 /* End PBXBuildFile section */
@@ -1928,6 +1929,7 @@
 		BFDA726E1C10573F0096BE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDA727A1C10618A0096BE82 /* AdjustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustViewController.swift; sourceTree = "<group>"; };
 		BFDA727C1C1061C00096BE82 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		BFE9DF7C202FA8CB00F4FEC1 /* ForecastDoubleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDoubleViewController.swift; sourceTree = "<group>"; };
 		BFF44C5A1C50F9F5007E29D2 /* InputTextTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextTableCell.swift; sourceTree = "<group>"; };
 		D5C25DC100CB2331B1F656BA /* Pods-ぽけメモ2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ぽけメモ2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ぽけメモ2/Pods-ぽけメモ2.debug.xcconfig"; sourceTree = "<group>"; };
 		E1268B4393A3C7C36065887F /* Pods______2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______2UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2002,6 +2004,7 @@
 				BFB4C78E1DD48561003D0880 /* BattleViewController.swift */,
 				BF20B6771FA1EDCD0010550B /* ChoosePartyViewController.swift */,
 				BF21920A1D1C03DE00AA7DF9 /* ForecastViewController.swift */,
+				BFE9DF7C202FA8CB00F4FEC1 /* ForecastDoubleViewController.swift */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -4283,6 +4286,7 @@
 				BFDA727B1C10618A0096BE82 /* AdjustViewController.swift in Sources */,
 				BF33F1671C5A376D00D22BC4 /* MemoViewController.swift in Sources */,
 				BF6F2CEB1E27A1CD0052CCCF /* TableViewRootCell.swift in Sources */,
+				BFE9DF7D202FA8CB00F4FEC1 /* ForecastDoubleViewController.swift in Sources */,
 				BF21920B1D1C03DE00AA7DF9 /* ForecastViewController.swift in Sources */,
 				BFDA727D1C1061C00096BE82 /* SetupViewController.swift in Sources */,
 				BF2ED5481DAF861200F8FAEF /* MonsterballViewControllor.swift in Sources */,

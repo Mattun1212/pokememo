@@ -1,16 +1,16 @@
 //
-//  ForecastViewController.swift
+//  ForecastDoubleViewController.swift
 //  ぽけメモ2
 //
-//  Created by マツシタ コウタロウ on 2016/06/23.
-//  Copyright © 2016年 マツシタ コウタロウ. All rights reserved.
+//  Created by マツシタ コウタロウ on 2018/02/11.
+//  Copyright © 2018年 マツシタ コウタロウ. All rights reserved.
 //
 
 import UIKit
 
 import RealmSwift
 
-class ForecastViewController: UIViewController {
+class ForecastDoubleViewController: UIViewController {
     
     @IBOutlet var firstbutton: UIButton!
     @IBOutlet var secondbutton: UIButton!
@@ -35,7 +35,7 @@ class ForecastViewController: UIViewController {
         Snum = String(number)
         
         
-        //        print(sendText)
+                print(sendText)
         buttonArray = [firstbutton,secondbutton,thirdbutton,fourthbutton,fifthbutton,sixthbutton]
         
         
@@ -45,7 +45,6 @@ class ForecastViewController: UIViewController {
             for j in 0..<sendText.count{
                 if sendText[j] == loadText[i][1]{
                     buttonArray[j].setBackgroundImage(UIImage(named: loadText[i][2]), for: .normal)
-                    buttonArray[j].adjustsImageWhenHighlighted = false
                     //                   print(buttonArray[j].backgroundImage(for: .normal) ?? )
                     
                 }
@@ -59,7 +58,7 @@ class ForecastViewController: UIViewController {
     @IBAction func buttonTapped(_ sender : UIButton){
         
         sender.backgroundColor = UIColor.red
-        if number >= 3{
+        if number >= 4{
             sender.backgroundColor = UIColor.clear
         }
         
@@ -75,10 +74,12 @@ class ForecastViewController: UIViewController {
         }else if number == 3{
             Snum = "3"
             sender.isEnabled = false
-        }else if number >= 4{
+        }else if number == 4{
+            Snum = "4"
+            sender.isEnabled = false
+        }else if number >= 5{
             Snum = " "
         }
-        
         sender.setTitle(Snum, for: .normal)
     }
     
@@ -113,4 +114,5 @@ class ForecastViewController: UIViewController {
     
     
 }
+
 
