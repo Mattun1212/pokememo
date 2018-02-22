@@ -25,6 +25,7 @@ class ForecastViewController: UIViewController {
     var iconload = IconLoad()
     var loadText = [[String]]()
     var buttonArray:[UIButton]!
+    var sendArray:[UIButton] = []
     var labelArray:[UILabel]!
     var number = 0
     var num = 0
@@ -66,14 +67,18 @@ class ForecastViewController: UIViewController {
         number += 1
         if number == 0{
             sender.setTitle(" ", for: .normal)
+
         }else if number == 1{
             Snum = "1"
+            sendArray.append(sender)
             sender.isEnabled = false
         }else if number == 2{
             Snum = "2"
+            sendArray.append(sender)
             sender.isEnabled = false
         }else if number == 3{
             Snum = "3"
+            sendArray.append(sender)
             sender.isEnabled = false
         }else if number >= 4{
             Snum = " "
@@ -82,7 +87,7 @@ class ForecastViewController: UIViewController {
         sender.setTitle(Snum, for: .normal)
     }
     
-    
+
     @IBAction func clear(_ sender : UIButton){
         number = 0
         for o in 0..<buttonArray.count{
@@ -105,8 +110,11 @@ class ForecastViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
-        if segue.identifier == "toAnalyze" {
-            //            let ForecastViewController = segue.destination as! AnalyzeViewController
+        if segue.identifier == "ToAnalyze" {
+           let resultViewController = segue.destination as! ResultViewController
+            for k in 0..<sendArray.count-1{
+               resultViewController.buttonArray.append(sendArray[k])
+            
         }
         
     }
@@ -114,3 +122,5 @@ class ForecastViewController: UIViewController {
     
 }
 
+
+}
