@@ -16,27 +16,33 @@ class ResultViewController: UIViewController {
 //    @IBOutlet var fourthbutton: UIButton!
 //    @IBOutlet var fifthbutton: UIButton!
 //    @IBOutlet var sixthbutton: UIButton!
+    
+    @IBOutlet var segment:UISegmentedControl!
+    
     var buttonArray:[UIButton] = []
+    var ceptImage:[UIImage] = []
     var sendText:[String] = [String]()
     var loadText = [[String]]()
     var iconload = IconLoad()
     var number = 0
     var num = 0
     var Snum :String?
+    var getPartyTitle:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonArray = [firstbutton,secondbutton,thirdbutton]
         Snum = String(number)
-        
-        buttonArray = []
-        
         
         loadText = iconload.loadcsv()
         
+            for i in 0...ceptImage.count-1{
+                 buttonArray[i].setBackgroundImage(ceptImage[i], for: .normal)
+            }
+
     }
             
-        // Do any additional setup after loading the view.
+    
 
     
     override func didReceiveMemoryWarning() {
@@ -76,6 +82,19 @@ class ResultViewController: UIViewController {
         sender.setTitle(Snum, for: .normal)
     }
     
+    @IBAction func decide(){
+        var saveClass = SaveClass()
+        var getPartyInfo = saveClass.getPartyInfoAll().filter("partyTitle == %@",getPartyTitle)
+        getPartyInfo.first?.matchCount += 1
+        
+        if segment.selectedSegmentIndex == 0 {
+            getPartyInfo.first?.winnigCount += 1
+        }
+        
+        saveClass.savePartyInfo(partyInfo: getPartyInfo.first!)
+        
+        
+    }
     
     @IBAction func clear(_ sender : UIButton){
         number = 0
@@ -89,7 +108,9 @@ class ResultViewController: UIViewController {
         
     }
     
-   
+    
+    
+
 
     /*
     // MARK: - Navigation

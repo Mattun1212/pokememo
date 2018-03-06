@@ -30,6 +30,8 @@ class ForecastDoubleViewController: UIViewController {
     var num = 0
     var Snum :String?
     
+    var getPartyTitle:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Snum = String(number)

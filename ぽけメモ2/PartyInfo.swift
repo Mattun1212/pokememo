@@ -59,6 +59,9 @@ class PartyInfo: Object {
     dynamic var partyComment:String = ""
     var pokemons = List<Pokemon>()  //配列の代わりにListを使う
     
+    dynamic var winnigCount:Int = 0
+    dynamic var matchCount:Int = 0
+    
 }
 
 
@@ -120,7 +123,6 @@ class SaveClass {
         }
         
     }
-    
 }
 
     

@@ -14,6 +14,7 @@ class TableViewRootCell: UITableViewCell {
     fileprivate var scale: CGFloat = 1.0
     fileprivate let cross = UIImageView()
     let label = UILabel()
+    var winningRateLabel = UILabel()
     
     var extended: Bool {
         didSet {
@@ -27,6 +28,7 @@ class TableViewRootCell: UITableViewCell {
         didSet {
             scale = self.frame.size.height / initialHeight
             label.transform = CGAffineTransform(scaleX: scale, y: scale)
+            winningRateLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
             let t = CGAffineTransformExtractRotation(cross.transform)
             cross.transform = t.scaledBy(x: scale, y: scale)
         }
@@ -52,7 +54,11 @@ class TableViewRootCell: UITableViewCell {
         self.contentView.addSubview(cross)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
+        winningRateLabel.translatesAutoresizingMaskIntoConstraints = false
+        winningRateLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         self.contentView.addSubview(label)
+        self.contentView.addSubview(winningRateLabel)
+        
     }
     
     fileprivate func setupConstraints() {
@@ -60,6 +66,11 @@ class TableViewRootCell: UITableViewCell {
         let triangleCenterY = NSLayoutConstraint(item: cross, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0.0)
         let labelCenterX = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: self.contentView, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         let labelCenterY = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0.0)
-        NSLayoutConstraint.activate([triangleLeading, triangleCenterY, labelCenterX, labelCenterY])
+        
+        let winnigRateLabelX = NSLayoutConstraint(item: winningRateLabel, attribute: .rightMargin, relatedBy: .equal, toItem: self.contentView, attribute: .rightMargin, multiplier: 1.0, constant: 0.0)
+        let winnigRateLabelY = NSLayoutConstraint(item: winningRateLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        
+        
+        NSLayoutConstraint.activate([triangleLeading, triangleCenterY, labelCenterX, labelCenterY, winnigRateLabelX, winnigRateLabelY])
     }
 }

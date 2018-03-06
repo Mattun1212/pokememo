@@ -29,6 +29,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     var sixthArray = [String]()
     var iconload = IconLoad()
     
+    
+    var getPartyTitle:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTextField.delegate = self
@@ -71,6 +74,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Double"{
             let forecastDoubleViewController = segue.destination as! ForecastDoubleViewController
+            forecastDoubleViewController.getPartyTitle = getPartyTitle
     
             forecastDoubleViewController.sendText.append(self.firstTextField.text!)
             forecastDoubleViewController.sendText.append(self.secondTextField.text!)
@@ -85,6 +89,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         if  segue.identifier == "SecondView" {
             let SecondViewController = segue.destination as! ForecastViewController
+            SecondViewController.getPartyTitle = getPartyTitle
             
             SecondViewController.sendText.append(self.firstTextField.text!)
             SecondViewController.sendText.append(self.secondTextField.text!)
@@ -93,6 +98,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             SecondViewController.sendText.append(self.fifthTextField.text!)
             SecondViewController.sendText.append(self.sixthTextField.text!)
         }
+        
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

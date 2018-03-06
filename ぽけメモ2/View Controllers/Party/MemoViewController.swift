@@ -13,8 +13,8 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
     
     var selectedIndex: Int?
     var saveIndex: Int!
-    
     var saveData:SaveClass!
+    var winingpercent:SaveClass!
     var partyInfo: PartyInfo = PartyInfo()
     
     var savedPartyInfo:Results<PartyInfo>?
@@ -48,6 +48,7 @@ class MemoViewController: UIViewController ,UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         //データの取得の初期設定
         saveData = SaveClass(recieveIndex: saveIndex)
+        
         
     }
     

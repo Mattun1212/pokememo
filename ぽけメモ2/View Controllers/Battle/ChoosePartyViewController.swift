@@ -32,6 +32,7 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     var savedPartyInfo:Results<PartyInfo>?  //Realmから取得したデータ用 PartyInfoの配列(ArrayじゃなくてResult型)
     
     var sendPokemon:Pokemon?
+    var sendPartyTitle:String!
     
     var rowNum:Int!
     //    var formatArray = [String]()
@@ -60,7 +61,10 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         
         print("partyInfo::\(savedPartyInfo)")
     
-        tableView.reloadData()
+        if savedPartyInfo?.count != 0{
+            tableView.reloadData()
+        }
+        
         
         
         //データを一時的に代入するテスト関数
@@ -79,8 +83,10 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
             savedPartyInfo = partyInfo as? Results<PartyInfo>
             
         }
-        
-        rowNum = (savedPartyInfo?[section].pokemons.count)! + 1
+        if savedPartyInfo?.count != 0{
+             rowNum = (savedPartyInfo?[section].pokemons.count)! + 1
+        }
+       
         
     
         return (savedPartyInfo?.count)! 
@@ -90,6 +96,7 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        var pokemon:Pokemon = savedPartyInfo![indexPath.section].pokemons[indexPath.row]
+        sendPartyTitle = savedPartyInfo![indexPath.section].partyTitle
         self.performSegue(withIdentifier: "toBattle", sender: nil)
         
     }
@@ -107,6 +114,8 @@ class ChoosePartyViewController: UIViewController, UITableViewDelegate, UITableV
         // 次の画面に値を渡したい場合はここに書く
         if segue.identifier == "toBattle" {
             let battleViewController = segue.destination as! SecondViewController
+            
+            battleViewController.getPartyTitle = sendPartyTitle
         }
         
         

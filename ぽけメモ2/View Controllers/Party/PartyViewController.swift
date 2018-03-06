@@ -60,8 +60,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //tableViewでどのcellを使うかの登録 今回は2種類
         self.tableView.register(TableViewRootCell.self, forCellReuseIdentifier: RootCellIdentifier)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: SubCellIdentifier)
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+//      self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
     }
     
     
@@ -198,6 +197,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 //"Section \(indexPath.section)"
                 cell.backgroundColor = UIColor(white: CGFloat(0.5 - 0.5 * Double(indexPath.section) / Double(tableView.numberOfSections)), alpha: 1.0)
                 cell.label.textColor = UIColor.white
+                
+                var matchCount = (savedPartyInfo?[indexPath.section].matchCount)!
+                if matchCount == 0{
+                    matchCount = 1
+                }
+                var rate:Int = (savedPartyInfo?[indexPath.section].winnigCount)! * 100 / matchCount
+                
+                cell.winningRateLabel.textColor = UIColor.white
+                cell.winningRateLabel.text = "\(rate)%"
                 
                 //cellの種類に応じて内容変更。中身みて見よう。
                 cell.extended = isSectionExtended(indexPath.section)

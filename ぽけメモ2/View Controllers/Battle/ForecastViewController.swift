@@ -25,20 +25,21 @@ class ForecastViewController: UIViewController {
     var iconload = IconLoad()
     var loadText = [[String]]()
     var buttonArray:[UIButton]!
-    var sendArray:[UIButton] = []
+    var sendArray:[UIImage]!
     var labelArray:[UILabel]!
     var number = 0
     var num = 0
     var Snum :String?
     
+    var getPartyTitle:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Snum = String(number)
-        
+        sendArray = []
         
         //        print(sendText)
         buttonArray = [firstbutton,secondbutton,thirdbutton,fourthbutton,fifthbutton,sixthbutton]
-        
         
         loadText = iconload.loadcsv()
         
@@ -65,32 +66,32 @@ class ForecastViewController: UIViewController {
             sender.backgroundColor = UIColor.clear
         }
         
+        
         number += 1
         if number == 0{
             sender.setTitle(" ", for: .normal)
-
         }else if number == 1{
             Snum = "1"
-            sendArray.append(sender)
+            sendArray.append(sender.backgroundImage(for: .normal)!)
             sender.isEnabled = false
         }else if number == 2{
             Snum = "2"
-            sendArray.append(sender)
+            sendArray.append(sender.backgroundImage(for: .normal)!)
             sender.isEnabled = false
         }else if number == 3{
             Snum = "3"
-            sendArray.append(sender)
+            sendArray.append(sender.backgroundImage(for: .normal)!)
             sender.isEnabled = false
         }else if number >= 4{
             Snum = " "
         }
-        
         sender.setTitle(Snum, for: .normal)
     }
     
-
+    
     @IBAction func clear(_ sender : UIButton){
         number = 0
+        sendArray = []
         for o in 0..<buttonArray.count{
             buttonArray[o].isEnabled = true
         }
@@ -112,16 +113,17 @@ class ForecastViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
         if segue.identifier == "ToAnalyze" {
-           let resultViewController = segue.destination as! ResultViewController
-            for k in 0..<sendArray.count-1{
-               resultViewController.buttonArray.append(sendArray[k])
+            let resultViewController = segue.destination as! ResultViewController
+            resultViewController.getPartyTitle = getPartyTitle
+            for k in 0..<sendArray.count{
+                resultViewController.ceptImage.append(sendArray[k])
+                
+            }
             
         }
+        
         
     }
     
     
-}
-
-
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 class ResultDoubleViewController: UIViewController {
+    var getPartyTitle:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
