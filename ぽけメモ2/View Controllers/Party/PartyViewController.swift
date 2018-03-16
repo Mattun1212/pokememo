@@ -202,7 +202,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 if matchCount == 0{
                     matchCount = 1
                 }
-                var rate:Int = (savedPartyInfo?[indexPath.section].winnigCount)! * 100 / matchCount
+                var rate:Int = (savedPartyInfo?[indexPath.section].winningCount)! * 100 / matchCount
                 
                 cell.winningRateLabel.textColor = UIColor.white
                 cell.winningRateLabel.text = "\(rate)%"
@@ -223,6 +223,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
        
         
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "削除") { (action, index) -> Void in
+            self.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        deleteButton.backgroundColor = UIColor.red
+        
+        return [deleteButton]
     }
     
     ///MARK: - <UITableViewDelegate>

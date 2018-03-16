@@ -475,6 +475,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="相手のパーティ" id="0El-bQ-g6a"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="button" destination="Qi1-Ue-ev0" id="3lq-Vf-On8"/>
                         <outlet property="fifthTextField" destination="Xyo-Sp-2fc" id="V7q-YH-TbL"/>
@@ -622,6 +623,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="決定"/>
                                 <connections>
+                                    <action selector="decide" destination="Fp0-do-Edq" eventType="touchUpInside" id="gMr-HE-YLC"/>
                                     <segue destination="htC-pQ-lDX" kind="push" id="hpa-DF-SvS"/>
                                 </connections>
                             </button>
@@ -646,6 +648,7 @@
                     <connections>
                         <outlet property="firstbutton" destination="RJU-q0-lDq" id="Azv-TP-zvX"/>
                         <outlet property="secondbutton" destination="Jn7-5i-wWy" id="M0h-y5-kgR"/>
+                        <outlet property="segment" destination="SQt-h9-AhH" id="Qc3-B3-vfD"/>
                         <outlet property="thirdbutton" destination="hi0-LR-ihV" id="d4X-7y-IKT"/>
                     </connections>
                 </viewController>
@@ -685,7 +688,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SETUP" image="setup2.png" id="rUN-IP-lWF"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="SETUP" image="setup2.png" id="rUN-IP-lWF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKp-Wq-RvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -728,7 +731,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ADJUST" image="adjust4.png" id="6eU-8U-66y"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="ADJUST" image="adjust4.png" id="6eU-8U-66y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYp-fs-pPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -838,7 +841,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="htC-pQ-lDX" kind="relationship" relationship="rootViewController" id="FAq-o6-X6z"/>
+                        <segue destination="htC-pQ-lDX" kind="relationship" relationship="rootViewController" id="Ua2-Kf-l7S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFj-29-usi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -910,7 +913,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="決定"/>
                                 <connections>
-                                    <segue destination="fRg-LK-UXt" kind="push" id="9dD-0A-6S8"/>
+                                    <segue destination="rjZ-Gc-apb" kind="push" identifier="toAnalyze" id="4Qt-py-YT7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -938,23 +941,89 @@
             <point key="canvasLocation" x="1977" y="-384"/>
         </scene>
         <!--Result Double View Controller-->
-        <scene sceneID="29F-Lb-Bhi">
+        <scene sceneID="HHH-xe-Qmw">
             <objects>
-                <viewController id="fRg-LK-UXt" customClass="ResultDoubleViewController" customModule="ほ_けメモ2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rjZ-Gc-apb" customClass="ResultDoubleViewController" customModule="ほ_けメモ2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qlO-ir-MiS"/>
-                        <viewControllerLayoutGuide type="bottom" id="MD0-B9-YSb"/>
+                        <viewControllerLayoutGuide type="top" id="2aj-ea-vSb"/>
+                        <viewControllerLayoutGuide type="bottom" id="zth-nj-caw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X8Z-fQ-wNi">
+                    <view key="view" contentMode="scaleToFill" id="a20-zl-HJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d7F-g3-V97">
+                                <rect key="frame" x="100" y="358" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="勝ち"/>
+                                    <segment title="負け"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7U-ri-PT9">
+                                <rect key="frame" x="131" y="425" width="58" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="decide" destination="rjZ-Gc-apb" eventType="touchUpInside" id="WBp-fk-PqW"/>
+                                    <action selector="decide" destination="Fp0-do-Edq" eventType="touchUpInside" id="gTT-wN-bBa"/>
+                                    <segue destination="htC-pQ-lDX" kind="push" id="6LA-8c-PIn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSR-Qm-0Aw">
+                                <rect key="frame" x="43" y="264" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="rjZ-Gc-apb" eventType="touchUpInside" id="Gg4-Vu-Z7w"/>
+                                    <action selector="buttonTapped:" destination="Fp0-do-Edq" eventType="touchUpInside" id="dvD-n0-8Na"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Me-BQz">
+                                <rect key="frame" x="197" y="264" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="rjZ-Gc-apb" eventType="touchUpInside" id="1ic-3m-eHg"/>
+                                    <action selector="buttonTapped:" destination="Fp0-do-Edq" eventType="touchUpInside" id="uOL-Xt-1l0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCn-XD-dAB">
+                                <rect key="frame" x="43" y="126" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Fp0-do-Edq" eventType="touchUpInside" id="5bi-Ew-f2q"/>
+                                    <action selector="buttonTapped:" destination="rjZ-Gc-apb" eventType="touchUpInside" id="DFV-vO-NfA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZI-u4-QsV">
+                                <rect key="frame" x="197" y="126" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="rjZ-Gc-apb" eventType="touchUpInside" id="4tm-8H-9rt"/>
+                                    <action selector="buttonTapped:" destination="Fp0-do-Edq" eventType="touchUpInside" id="AEp-HY-X14"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sIG-TR-hAD"/>
+                    <navigationItem key="navigationItem" id="2Po-dz-RYf">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="iqd-E6-Y99">
+                            <connections>
+                                <action selector="clear:" destination="rjZ-Gc-apb" id="4m3-ct-wiJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="firstbutton" destination="sCn-XD-dAB" id="U9S-Cr-I8r"/>
+                        <outlet property="fourthbutton" destination="bA9-Me-BQz" id="9aw-5g-PJO"/>
+                        <outlet property="secondbutton" destination="rZI-u4-QsV" id="m5l-gF-7yd"/>
+                        <outlet property="segment" destination="d7F-g3-V97" id="3ST-9j-Kju"/>
+                        <outlet property="thirdbutton" destination="KSR-Qm-0Aw" id="qed-R7-Odo"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I1E-eM-3Pc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVz-l4-6x7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2475" y="-384"/>
+            <point key="canvasLocation" x="2484" y="-384"/>
         </scene>
     </scenes>
     <resources>
@@ -967,7 +1036,7 @@
         <image name="start.png" width="310" height="505"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m66-HN-axR"/>
-        <segue reference="hpa-DF-SvS"/>
+        <segue reference="HoX-g0-BAB"/>
+        <segue reference="6LA-8c-PIn"/>
     </inferredMetricsTieBreakers>
 </document>

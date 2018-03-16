@@ -24,6 +24,7 @@ class ForecastDoubleViewController: UIViewController {
     
     var iconload = IconLoad()
     var loadText = [[String]]()
+    var sendArray: [UIImage]!
     var buttonArray:[UIButton]!
     var labelArray:[UILabel]!
     var number = 0
@@ -33,6 +34,7 @@ class ForecastDoubleViewController: UIViewController {
     var getPartyTitle:String!
     
     override func viewDidLoad() {
+        sendArray = []
         super.viewDidLoad()
         Snum = String(number)
         
@@ -70,15 +72,19 @@ class ForecastDoubleViewController: UIViewController {
         }else if number == 1{
             Snum = "1"
             sender.isEnabled = false
+            sendArray.append(sender.backgroundImage(for: .normal)!)
         }else if number == 2{
             Snum = "2"
             sender.isEnabled = false
+            sendArray.append(sender.backgroundImage(for: .normal)!)
         }else if number == 3{
             Snum = "3"
             sender.isEnabled = false
+            sendArray.append(sender.backgroundImage(for: .normal)!)
         }else if number == 4{
             Snum = "4"
             sender.isEnabled = false
+            sendArray.append(sender.backgroundImage(for: .normal)!)
         }else if number >= 5{
             Snum = " "
         }
@@ -88,6 +94,7 @@ class ForecastDoubleViewController: UIViewController {
     
     @IBAction func clear(_ sender : UIButton){
         number = 0
+        sendArray = []
         for o in 0..<buttonArray.count{
             buttonArray[o].isEnabled = true
         }
@@ -109,12 +116,16 @@ class ForecastDoubleViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面に値を渡したい場合はここに書く
         if segue.identifier == "toAnalyze" {
-            //            let ForecastViewController = segue.destination as! AnalyzeViewController
-        }
+            let DresultViewController = segue.destination as! ResultDoubleViewController
+            DresultViewController.getPartyTitle = getPartyTitle
+            for k in 0..<sendArray.count{
+                DresultViewController.ceptImage.append(sendArray[k])
+                
+            }
         
     }
     
     
 }
 
-
+}

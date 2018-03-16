@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ResultViewController: UIViewController {
     
@@ -85,15 +86,22 @@ class ResultViewController: UIViewController {
     @IBAction func decide(){
         var saveClass = SaveClass()
         var getPartyInfo = saveClass.getPartyInfoAll().filter("partyTitle == %@",getPartyTitle)
-        getPartyInfo.first?.matchCount += 1
         
-        if segment.selectedSegmentIndex == 0 {
-            getPartyInfo.first?.winnigCount += 1
+        let realm = try! Realm()
+        
+        
+            try! realm.write{
+                getPartyInfo.first!.matchCount += 1
+                if segment.selectedSegmentIndex == 0 {
+                    getPartyInfo.first!.winningCount += 1
+                }
         }
+        
+       
         
         saveClass.savePartyInfo(partyInfo: getPartyInfo.first!)
         
-        
+         
     }
     
     @IBAction func clear(_ sender : UIButton){
